@@ -24,7 +24,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 Modified by Jiachen An <Gasin185@163.com>
-Website: http://www.github.com/GasinAn/h5bs/dnb.pyx
+Website: https://github.com/GasinAn/h5bs/blob/main/dnb.pyx
 
 Copyright (c) 2021 Jiachen An (Gasin185@163.com)
 
