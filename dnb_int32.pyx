@@ -191,6 +191,8 @@ def reduce_precision(
                 # see arXiv:1503.00638v3 [astro-ph.IM] 16 Sep 2015.
                 if is_auto:
                     # if n_a==n_b, s**2 = (auto_a*auto_b)/nsamp.
+                    # (s_{?ij}**2 := 1/(C^-1)_{?ij,?ij} = C_{?ij,?ij})
+                    # (C_{Re,ii;Re,ii} = sigma_{Re,ii}**2)
                     # (sigma_{Re,ii}**2 = V_{ii}**2/N)
                     # gran**2 < 12*f*(auto_a*auto_b)/nsamp,
                     # gran**2 < auto_a*auto_b*(12*f/nsamp).
@@ -203,6 +205,7 @@ def reduce_precision(
                     vis_r[jj,ii,kk].i = 0
                 else:
                     # if n_a!=n_b, s**2 = (auto_a*auto_b)/(2*nsamp).
+                    # (C_{Re/Im,ij;Re/Im,ij} = sigma_{Re/Im,ij}**2)
                     # (sigma_{Re/Im,ij}**2 = (V_{ii}*V_{jj})/(2*N) (i!=j))
                     # gran**2 < 12*f*(auto_a*auto_b)/(2*nsamp),
                     # gran**2 < auto_a*auto_b*(12*f/nsamp)/2.
