@@ -2,7 +2,7 @@ import numpy
 import h5py
 import hdf5plugin
 
-from dnb import reduce_precision
+from dnb_int32 import reduce_precision
 
 
 DTYPE = numpy.dtype([('r', numpy.int32), ('i', numpy.int32)])

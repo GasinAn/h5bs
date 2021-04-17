@@ -4,12 +4,12 @@
 {
     "distutils": {
         "depends": [],
-        "name": "dnb",
+        "name": "dnb_int32",
         "sources": [
-            "dnb.pyx"
+            "dnb_int32.pyx"
         ]
     },
-    "module_name": "dnb"
+    "module_name": "dnb_int32"
 }
 END: Cython Metadata */
 
@@ -617,8 +617,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__dnb
-#define __PYX_HAVE_API__dnb
+#define __PYX_HAVE__dnb_int32
+#define __PYX_HAVE_API__dnb_int32
 /* Early includes */
 #include <string.h>
 #include <stdio.h>
@@ -861,7 +861,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "dnb.pyx",
+  "dnb_int32.pyx",
   "__init__.pxd",
   "type.pxd",
 };
@@ -1152,17 +1152,17 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
  * cdef inline object PyArray_MultiIterNew1(a):
  */
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
-struct __pyx_t_3dnb_VIS_DTYPE_t;
-typedef struct __pyx_t_3dnb_VIS_DTYPE_t __pyx_t_3dnb_VIS_DTYPE_t;
+struct __pyx_t_9dnb_int32_VIS_DTYPE_t;
+typedef struct __pyx_t_9dnb_int32_VIS_DTYPE_t __pyx_t_9dnb_int32_VIS_DTYPE_t;
 
-/* "dnb.pyx":62
+/* "dnb_int32.pyx":62
  * 
  * 
  * ctypedef struct VIS_DTYPE_t:             # <<<<<<<<<<<<<<
  *     np.int32_t r
  *     np.int32_t i
  */
-struct __pyx_t_3dnb_VIS_DTYPE_t {
+struct __pyx_t_9dnb_int32_VIS_DTYPE_t {
   __pyx_t_5numpy_int32_t r;
   __pyx_t_5numpy_int32_t i;
 };
@@ -1808,21 +1808,21 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void); /*proto*/
 
 /* Module declarations from 'libc.math' */
 
-/* Module declarations from 'dnb' */
-static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5numpy_int32_t, __pyx_t_5numpy_int32_t); /*proto*/
+/* Module declarations from 'dnb_int32' */
+static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_9dnb_int32_bit_round(__pyx_t_5numpy_int32_t, __pyx_t_5numpy_int32_t); /*proto*/
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t = { "int32_t", NULL, sizeof(__pyx_t_5numpy_int32_t), { 0 }, 0, IS_UNSIGNED(__pyx_t_5numpy_int32_t) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_5numpy_int32_t), 0 };
-static __Pyx_StructField __Pyx_StructFields_nn___pyx_t_3dnb_VIS_DTYPE_t[] = {
-  {&__Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t, "r", offsetof(__pyx_t_3dnb_VIS_DTYPE_t, r)},
-  {&__Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t, "i", offsetof(__pyx_t_3dnb_VIS_DTYPE_t, i)},
+static __Pyx_StructField __Pyx_StructFields_nn___pyx_t_9dnb_int32_VIS_DTYPE_t[] = {
+  {&__Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t, "r", offsetof(__pyx_t_9dnb_int32_VIS_DTYPE_t, r)},
+  {&__Pyx_TypeInfo_nn___pyx_t_5numpy_int32_t, "i", offsetof(__pyx_t_9dnb_int32_VIS_DTYPE_t, i)},
   {NULL, NULL, 0}
 };
-static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_3dnb_VIS_DTYPE_t = { "VIS_DTYPE_t", __Pyx_StructFields_nn___pyx_t_3dnb_VIS_DTYPE_t, sizeof(__pyx_t_3dnb_VIS_DTYPE_t), { 0 }, 0, 'S', 0, 0 };
+static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_9dnb_int32_VIS_DTYPE_t = { "VIS_DTYPE_t", __Pyx_StructFields_nn___pyx_t_9dnb_int32_VIS_DTYPE_t, sizeof(__pyx_t_9dnb_int32_VIS_DTYPE_t), { 0 }, 0, 'S', 0, 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_int64_t = { "int64_t", NULL, sizeof(__pyx_t_5numpy_int64_t), { 0 }, 0, IS_UNSIGNED(__pyx_t_5numpy_int64_t) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_5numpy_int64_t), 0 };
-#define __Pyx_MODULE_NAME "dnb"
-extern int __pyx_module_is_main_dnb;
-int __pyx_module_is_main_dnb = 0;
+#define __Pyx_MODULE_NAME "dnb_int32"
+extern int __pyx_module_is_main_dnb_int32;
+int __pyx_module_is_main_dnb_int32 = 0;
 
-/* Implementation of 'dnb' */
+/* Implementation of 'dnb_int32' */
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_xrange;
 static PyObject *__pyx_builtin_range;
@@ -1840,7 +1840,6 @@ static const char __pyx_k_np[] = "np";
 static const char __pyx_k_t0[] = "t0";
 static const char __pyx_k_amp[] = "amp";
 static const char __pyx_k_any[] = "any";
-static const char __pyx_k_dnb[] = "dnb";
 static const char __pyx_k_end[] = "end";
 static const char __pyx_k_msg[] = "msg";
 static const char __pyx_k_n_a[] = "n_a";
@@ -1882,7 +1881,6 @@ static const char __pyx_k_import[] = "__import__";
 static const char __pyx_k_random[] = "random";
 static const char __pyx_k_test_2[] = "__test__";
 static const char __pyx_k_xrange[] = "xrange";
-static const char __pyx_k_dnb_pyx[] = "dnb.pyx";
 static const char __pyx_k_f_nsamp[] = "f_nsamp";
 static const char __pyx_k_is_auto[] = "is_auto";
 static const char __pyx_k_auto_vis[] = "auto_vis";
@@ -1893,6 +1891,7 @@ static const char __pyx_k_nsamples[] = "nsamples";
 static const char __pyx_k_recarray[] = "recarray";
 static const char __pyx_k_VIS_DTYPE[] = "VIS_DTYPE";
 static const char __pyx_k_auto_inds[] = "auto_inds";
+static const char __pyx_k_dnb_int32[] = "dnb_int32";
 static const char __pyx_k_gain_chan[] = "gain_chan";
 static const char __pyx_k_ValueError[] = "ValueError";
 static const char __pyx_k_empty_like[] = "empty_like";
@@ -1903,6 +1902,7 @@ static const char __pyx_k_Rounding_RMS[] = "Rounding RMS:";
 static const char __pyx_k_bit_round_py[] = "bit_round_py";
 static const char __pyx_k_perf_counter[] = "perf_counter";
 static const char __pyx_k_Rounding_bias[] = "Rounding bias:";
+static const char __pyx_k_dnb_int32_pyx[] = "dnb_int32.pyx";
 static const char __pyx_k_gran_sq_factor[] = "gran_sq_factor";
 static const char __pyx_k_rounding_error[] = "rounding_error";
 static const char __pyx_k_reduce_precision[] = "reduce_precision";
@@ -1947,8 +1947,8 @@ static PyObject *__pyx_n_s_bit_round_py;
 static PyObject *__pyx_n_s_chan_a;
 static PyObject *__pyx_n_s_chan_b;
 static PyObject *__pyx_n_s_cline_in_traceback;
-static PyObject *__pyx_n_s_dnb;
-static PyObject *__pyx_kp_s_dnb_pyx;
+static PyObject *__pyx_n_s_dnb_int32;
+static PyObject *__pyx_kp_s_dnb_int32_pyx;
 static PyObject *__pyx_n_s_empty;
 static PyObject *__pyx_n_s_empty_like;
 static PyObject *__pyx_n_s_end;
@@ -2012,9 +2012,9 @@ static PyObject *__pyx_n_s_vis;
 static PyObject *__pyx_n_s_vis_r;
 static PyObject *__pyx_n_s_vis_rounded;
 static PyObject *__pyx_n_s_xrange;
-static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_vis, int __pyx_v_nchan, PyArrayObject *__pyx_v_chan_a, PyArrayObject *__pyx_v_chan_b, __pyx_t_5numpy_float64_t __pyx_v_f_nsamp); /* proto */
-static PyObject *__pyx_pf_3dnb_2bit_round_py(CYTHON_UNUSED PyObject *__pyx_self, __pyx_t_5numpy_int32_t __pyx_v_val, __pyx_t_5numpy_int32_t __pyx_v_gran_max); /* proto */
-static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_l); /* proto */
+static PyObject *__pyx_pf_9dnb_int32_reduce_precision(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_vis, int __pyx_v_nchan, PyArrayObject *__pyx_v_chan_a, PyArrayObject *__pyx_v_chan_b, __pyx_t_5numpy_float64_t __pyx_v_f_nsamp); /* proto */
+static PyObject *__pyx_pf_9dnb_int32_2bit_round_py(CYTHON_UNUSED PyObject *__pyx_self, __pyx_t_5numpy_int32_t __pyx_v_val, __pyx_t_5numpy_int32_t __pyx_v_gran_max); /* proto */
+static PyObject *__pyx_pf_9dnb_int32_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_l); /* proto */
 static PyObject *__pyx_float_0_;
 static PyObject *__pyx_float_1_;
 static PyObject *__pyx_int_0;
@@ -2039,7 +2039,7 @@ static PyObject *__pyx_codeobj__8;
 static PyObject *__pyx_codeobj__10;
 /* Late includes */
 
-/* "dnb.pyx":72
+/* "dnb_int32.pyx":72
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * def reduce_precision(             # <<<<<<<<<<<<<<
@@ -2048,10 +2048,10 @@ static PyObject *__pyx_codeobj__10;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3dnb_1reduce_precision(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_3dnb_reduce_precision[] = "Reduce visibility precision.\n\n    Parameters\n    ----------\n    vis: array of VIS_DTYPE with shape (nfreq, nprod, ntime)\n        Visibilities to be processed.\n    nchan: int\n        The number of channels.\n    chan_a : array of integers with shape (nprod)\n        1st channel (channel A) in correlation product.\n    chan_b : array of integers with shape (nprod)\n        2nd channel (channel B) in correlation product.\n    f_nsamp : float\n        f/nsamples. Controls degree of precision reduction.\n\n    Returns\n    -------\n    vis_r : array like vis\n        Visibilities after rounding.\n\n    Notes\n    -----\n    The number of products should be consistent with the number of channels,\n    nprod = nchan*(nchan+1)/2, and channels should be labelled from 0 to\n    (nchan-1). Products can be in any order.\n\n    ";
-static PyMethodDef __pyx_mdef_3dnb_1reduce_precision = {"reduce_precision", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_3dnb_1reduce_precision, METH_VARARGS|METH_KEYWORDS, __pyx_doc_3dnb_reduce_precision};
-static PyObject *__pyx_pw_3dnb_1reduce_precision(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9dnb_int32_1reduce_precision(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_9dnb_int32_reduce_precision[] = "Reduce visibility precision.\n\n    Parameters\n    ----------\n    vis: array of VIS_DTYPE with shape (nfreq, nprod, ntime)\n        Visibilities to be processed.\n    nchan: int\n        The number of channels.\n    chan_a : array of integers with shape (nprod)\n        1st channel (channel A) in correlation product.\n    chan_b : array of integers with shape (nprod)\n        2nd channel (channel B) in correlation product.\n    f_nsamp : float\n        f/nsamples. Controls degree of precision reduction.\n\n    Returns\n    -------\n    vis_r : array like vis\n        Visibilities after rounding.\n\n    Notes\n    -----\n    The number of products should be consistent with the number of channels,\n    nprod = nchan*(nchan+1)/2, and channels should be labelled from 0 to\n    (nchan-1). Products can be in any order.\n\n    ";
+static PyMethodDef __pyx_mdef_9dnb_int32_1reduce_precision = {"reduce_precision", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9dnb_int32_1reduce_precision, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9dnb_int32_reduce_precision};
+static PyObject *__pyx_pw_9dnb_int32_1reduce_precision(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_vis = 0;
   int __pyx_v_nchan;
   PyArrayObject *__pyx_v_chan_a = 0;
@@ -2135,14 +2135,14 @@ static PyObject *__pyx_pw_3dnb_1reduce_precision(PyObject *__pyx_self, PyObject 
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("reduce_precision", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 72, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("dnb.reduce_precision", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("dnb_int32.reduce_precision", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_vis), __pyx_ptype_5numpy_ndarray, 0, "vis", 0))) __PYX_ERR(0, 73, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_chan_a), __pyx_ptype_5numpy_ndarray, 0, "chan_a", 0))) __PYX_ERR(0, 75, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_chan_b), __pyx_ptype_5numpy_ndarray, 0, "chan_b", 0))) __PYX_ERR(0, 76, __pyx_L1_error)
-  __pyx_r = __pyx_pf_3dnb_reduce_precision(__pyx_self, __pyx_v_vis, __pyx_v_nchan, __pyx_v_chan_a, __pyx_v_chan_b, __pyx_v_f_nsamp);
+  __pyx_r = __pyx_pf_9dnb_int32_reduce_precision(__pyx_self, __pyx_v_vis, __pyx_v_nchan, __pyx_v_chan_a, __pyx_v_chan_b, __pyx_v_f_nsamp);
 
   /* function exit code */
   goto __pyx_L0;
@@ -2153,7 +2153,7 @@ static PyObject *__pyx_pw_3dnb_1reduce_precision(PyObject *__pyx_self, PyObject 
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_vis, int __pyx_v_nchan, PyArrayObject *__pyx_v_chan_a, PyArrayObject *__pyx_v_chan_b, __pyx_t_5numpy_float64_t __pyx_v_f_nsamp) {
+static PyObject *__pyx_pf_9dnb_int32_reduce_precision(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_vis, int __pyx_v_nchan, PyArrayObject *__pyx_v_chan_a, PyArrayObject *__pyx_v_chan_b, __pyx_t_5numpy_float64_t __pyx_v_f_nsamp) {
   int __pyx_v_nprod;
   PyObject *__pyx_v_msg = NULL;
   int __pyx_v_ntime;
@@ -2247,7 +2247,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_pybuffernd_chan_b.rcbuffer = &__pyx_pybuffer_chan_b;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[2];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vis.rcbuffer->pybuffer, (PyObject*)__pyx_v_vis, &__Pyx_TypeInfo_nn___pyx_t_3dnb_VIS_DTYPE_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 72, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vis.rcbuffer->pybuffer, (PyObject*)__pyx_v_vis, &__Pyx_TypeInfo_nn___pyx_t_9dnb_int32_VIS_DTYPE_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) __PYX_ERR(0, 72, __pyx_L1_error)
   }
   __pyx_pybuffernd_vis.diminfo[0].strides = __pyx_pybuffernd_vis.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_vis.diminfo[0].shape = __pyx_pybuffernd_vis.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_vis.diminfo[1].strides = __pyx_pybuffernd_vis.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_vis.diminfo[1].shape = __pyx_pybuffernd_vis.rcbuffer->pybuffer.shape[1]; __pyx_pybuffernd_vis.diminfo[2].strides = __pyx_pybuffernd_vis.rcbuffer->pybuffer.strides[2]; __pyx_pybuffernd_vis.diminfo[2].shape = __pyx_pybuffernd_vis.rcbuffer->pybuffer.shape[2];
   {
@@ -2261,7 +2261,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
   }
   __pyx_pybuffernd_chan_b.diminfo[0].strides = __pyx_pybuffernd_chan_b.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_chan_b.diminfo[0].shape = __pyx_pybuffernd_chan_b.rcbuffer->pybuffer.shape[0];
 
-  /* "dnb.pyx":107
+  /* "dnb_int32.pyx":107
  *     """
  * 
  *     cdef int nprod = vis.shape[1]             # <<<<<<<<<<<<<<
@@ -2270,7 +2270,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
  */
   __pyx_v_nprod = (__pyx_v_vis->dimensions[1]);
 
-  /* "dnb.pyx":109
+  /* "dnb_int32.pyx":109
  *     cdef int nprod = vis.shape[1]
  * 
  *     if (2*nprod != nchan*(nchan+1)):             # <<<<<<<<<<<<<<
@@ -2280,7 +2280,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_t_1 = (((2 * __pyx_v_nprod) != (__pyx_v_nchan * (__pyx_v_nchan + 1))) != 0);
   if (unlikely(__pyx_t_1)) {
 
-    /* "dnb.pyx":110
+    /* "dnb_int32.pyx":110
  * 
  *     if (2*nprod != nchan*(nchan+1)):
  *         msg = "nprod should be equal to nchan*(nchan+1)/2."             # <<<<<<<<<<<<<<
@@ -2290,7 +2290,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_INCREF(__pyx_kp_s_nprod_should_be_equal_to_nchan_n);
     __pyx_v_msg = __pyx_kp_s_nprod_should_be_equal_to_nchan_n;
 
-    /* "dnb.pyx":111
+    /* "dnb_int32.pyx":111
  *     if (2*nprod != nchan*(nchan+1)):
  *         msg = "nprod should be equal to nchan*(nchan+1)/2."
  *         raise ValueError(msg)             # <<<<<<<<<<<<<<
@@ -2303,7 +2303,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __PYX_ERR(0, 111, __pyx_L1_error)
 
-    /* "dnb.pyx":109
+    /* "dnb_int32.pyx":109
  *     cdef int nprod = vis.shape[1]
  * 
  *     if (2*nprod != nchan*(nchan+1)):             # <<<<<<<<<<<<<<
@@ -2312,7 +2312,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
  */
   }
 
-  /* "dnb.pyx":113
+  /* "dnb_int32.pyx":113
  *         raise ValueError(msg)
  * 
  *     if np.any(chan_a>=nchan):             # <<<<<<<<<<<<<<
@@ -2348,7 +2348,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (unlikely(__pyx_t_1)) {
 
-    /* "dnb.pyx":114
+    /* "dnb_int32.pyx":114
  * 
  *     if np.any(chan_a>=nchan):
  *         msg = "Channel A should be labelled by integers less than nchan."             # <<<<<<<<<<<<<<
@@ -2358,7 +2358,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_INCREF(__pyx_kp_s_Channel_A_should_be_labelled_by);
     __pyx_v_msg = __pyx_kp_s_Channel_A_should_be_labelled_by;
 
-    /* "dnb.pyx":115
+    /* "dnb_int32.pyx":115
  *     if np.any(chan_a>=nchan):
  *         msg = "Channel A should be labelled by integers less than nchan."
  *         raise ValueError(msg)             # <<<<<<<<<<<<<<
@@ -2371,7 +2371,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __PYX_ERR(0, 115, __pyx_L1_error)
 
-    /* "dnb.pyx":113
+    /* "dnb_int32.pyx":113
  *         raise ValueError(msg)
  * 
  *     if np.any(chan_a>=nchan):             # <<<<<<<<<<<<<<
@@ -2380,7 +2380,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
  */
   }
 
-  /* "dnb.pyx":117
+  /* "dnb_int32.pyx":117
  *         raise ValueError(msg)
  * 
  *     if np.any(chan_b>=nchan):             # <<<<<<<<<<<<<<
@@ -2416,7 +2416,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (unlikely(__pyx_t_1)) {
 
-    /* "dnb.pyx":118
+    /* "dnb_int32.pyx":118
  * 
  *     if np.any(chan_b>=nchan):
  *         msg = "Channel B should be labelled by integers less than nchan."             # <<<<<<<<<<<<<<
@@ -2426,7 +2426,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_INCREF(__pyx_kp_s_Channel_B_should_be_labelled_by);
     __pyx_v_msg = __pyx_kp_s_Channel_B_should_be_labelled_by;
 
-    /* "dnb.pyx":119
+    /* "dnb_int32.pyx":119
  *     if np.any(chan_b>=nchan):
  *         msg = "Channel B should be labelled by integers less than nchan."
  *         raise ValueError(msg)             # <<<<<<<<<<<<<<
@@ -2439,7 +2439,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __PYX_ERR(0, 119, __pyx_L1_error)
 
-    /* "dnb.pyx":117
+    /* "dnb_int32.pyx":117
  *         raise ValueError(msg)
  * 
  *     if np.any(chan_b>=nchan):             # <<<<<<<<<<<<<<
@@ -2448,7 +2448,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
  */
   }
 
-  /* "dnb.pyx":121
+  /* "dnb_int32.pyx":121
  *         raise ValueError(msg)
  * 
  *     if np.any(chan_a<0):             # <<<<<<<<<<<<<<
@@ -2481,7 +2481,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (unlikely(__pyx_t_1)) {
 
-    /* "dnb.pyx":122
+    /* "dnb_int32.pyx":122
  * 
  *     if np.any(chan_a<0):
  *         msg = "Channel A should be labelled by non-negtive integers."             # <<<<<<<<<<<<<<
@@ -2491,7 +2491,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_INCREF(__pyx_kp_s_Channel_A_should_be_labelled_by_2);
     __pyx_v_msg = __pyx_kp_s_Channel_A_should_be_labelled_by_2;
 
-    /* "dnb.pyx":123
+    /* "dnb_int32.pyx":123
  *     if np.any(chan_a<0):
  *         msg = "Channel A should be labelled by non-negtive integers."
  *         raise ValueError(msg)             # <<<<<<<<<<<<<<
@@ -2504,7 +2504,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __PYX_ERR(0, 123, __pyx_L1_error)
 
-    /* "dnb.pyx":121
+    /* "dnb_int32.pyx":121
  *         raise ValueError(msg)
  * 
  *     if np.any(chan_a<0):             # <<<<<<<<<<<<<<
@@ -2513,7 +2513,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
  */
   }
 
-  /* "dnb.pyx":125
+  /* "dnb_int32.pyx":125
  *         raise ValueError(msg)
  * 
  *     if np.any(chan_b<0):             # <<<<<<<<<<<<<<
@@ -2546,7 +2546,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (unlikely(__pyx_t_1)) {
 
-    /* "dnb.pyx":126
+    /* "dnb_int32.pyx":126
  * 
  *     if np.any(chan_b<0):
  *         msg = "Channel B should be labelled by non-negtive integers."             # <<<<<<<<<<<<<<
@@ -2556,7 +2556,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_INCREF(__pyx_kp_s_Channel_B_should_be_labelled_by_2);
     __pyx_v_msg = __pyx_kp_s_Channel_B_should_be_labelled_by_2;
 
-    /* "dnb.pyx":127
+    /* "dnb_int32.pyx":127
  *     if np.any(chan_b<0):
  *         msg = "Channel B should be labelled by non-negtive integers."
  *         raise ValueError(msg)             # <<<<<<<<<<<<<<
@@ -2569,7 +2569,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __PYX_ERR(0, 127, __pyx_L1_error)
 
-    /* "dnb.pyx":125
+    /* "dnb_int32.pyx":125
  *         raise ValueError(msg)
  * 
  *     if np.any(chan_b<0):             # <<<<<<<<<<<<<<
@@ -2578,7 +2578,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
  */
   }
 
-  /* "dnb.pyx":129
+  /* "dnb_int32.pyx":129
  *         raise ValueError(msg)
  * 
  *     cdef int ntime = vis.shape[2]             # <<<<<<<<<<<<<<
@@ -2587,7 +2587,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
  */
   __pyx_v_ntime = (__pyx_v_vis->dimensions[2]);
 
-  /* "dnb.pyx":136
+  /* "dnb_int32.pyx":136
  *     cdef np.int32_t gran_max
  *     cdef float gran_max_sq
  *     cdef float gran_sq_factor = 12*f_nsamp             # <<<<<<<<<<<<<<
@@ -2596,7 +2596,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
  */
   __pyx_v_gran_sq_factor = (12.0 * __pyx_v_f_nsamp);
 
-  /* "dnb.pyx":137
+  /* "dnb_int32.pyx":137
  *     cdef float gran_max_sq
  *     cdef float gran_sq_factor = 12*f_nsamp
  *     cdef float half_gran_sq_factor = 6*f_nsamp             # <<<<<<<<<<<<<<
@@ -2605,7 +2605,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
  */
   __pyx_v_half_gran_sq_factor = (6.0 * __pyx_v_f_nsamp);
 
-  /* "dnb.pyx":140
+  /* "dnb_int32.pyx":140
  * 
  *     cdef np.ndarray[np.int64_t, ndim=1, mode='c'] auto_inds
  *     auto_inds = np.empty(nchan, np.int64)             # <<<<<<<<<<<<<<
@@ -2696,7 +2696,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_v_auto_inds = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "dnb.pyx":141
+  /* "dnb_int32.pyx":141
  *     cdef np.ndarray[np.int64_t, ndim=1, mode='c'] auto_inds
  *     auto_inds = np.empty(nchan, np.int64)
  *     auto_inds[:] = -1             # <<<<<<<<<<<<<<
@@ -2705,7 +2705,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
  */
   if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_auto_inds), __pyx_slice_, __pyx_int_neg_1) < 0)) __PYX_ERR(0, 141, __pyx_L1_error)
 
-  /* "dnb.pyx":147
+  /* "dnb_int32.pyx":147
  *     # auto_inds[chan_a[whether_auto]] = np.arange(nprod)[whether_auto]
  *     # they run almost as fast as each other.
  *     for ii in xrange(nprod):             # <<<<<<<<<<<<<<
@@ -2717,7 +2717,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
   for (__pyx_t_14 = 0; __pyx_t_14 < __pyx_t_13; __pyx_t_14+=1) {
     __pyx_v_ii = __pyx_t_14;
 
-    /* "dnb.pyx":148
+    /* "dnb_int32.pyx":148
  *     # they run almost as fast as each other.
  *     for ii in xrange(nprod):
  *         if (chan_a[ii] == chan_b[ii]):             # <<<<<<<<<<<<<<
@@ -2729,7 +2729,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
     __pyx_t_1 = (((*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_int64_t *, __pyx_pybuffernd_chan_a.rcbuffer->pybuffer.buf, __pyx_t_15, __pyx_pybuffernd_chan_a.diminfo[0].strides)) == (*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_int64_t *, __pyx_pybuffernd_chan_b.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_chan_b.diminfo[0].strides))) != 0);
     if (__pyx_t_1) {
 
-      /* "dnb.pyx":149
+      /* "dnb_int32.pyx":149
  *     for ii in xrange(nprod):
  *         if (chan_a[ii] == chan_b[ii]):
  *             auto_inds[chan_a[ii]] = ii             # <<<<<<<<<<<<<<
@@ -2740,7 +2740,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
       __pyx_t_17 = (*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_int64_t *, __pyx_pybuffernd_chan_a.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_chan_a.diminfo[0].strides));
       *__Pyx_BufPtrCContig1d(__pyx_t_5numpy_int64_t *, __pyx_pybuffernd_auto_inds.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_auto_inds.diminfo[0].strides) = __pyx_v_ii;
 
-      /* "dnb.pyx":148
+      /* "dnb_int32.pyx":148
  *     # they run almost as fast as each other.
  *     for ii in xrange(nprod):
  *         if (chan_a[ii] == chan_b[ii]):             # <<<<<<<<<<<<<<
@@ -2750,7 +2750,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
     }
   }
 
-  /* "dnb.pyx":152
+  /* "dnb_int32.pyx":152
  *     # Now chan_pairs[auto_inds[i]]==(i,i) (chan_pairs:=[(chan_a,chan_b)]).
  * 
  *     if np.any(auto_inds<0):             # <<<<<<<<<<<<<<
@@ -2783,7 +2783,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (unlikely(__pyx_t_1)) {
 
-    /* "dnb.pyx":153
+    /* "dnb_int32.pyx":153
  * 
  *     if np.any(auto_inds<0):
  *         msg = "Not all auto-correlations present in visibilities."             # <<<<<<<<<<<<<<
@@ -2793,7 +2793,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_INCREF(__pyx_kp_s_Not_all_auto_correlations_presen);
     __pyx_v_msg = __pyx_kp_s_Not_all_auto_correlations_presen;
 
-    /* "dnb.pyx":154
+    /* "dnb_int32.pyx":154
  *     if np.any(auto_inds<0):
  *         msg = "Not all auto-correlations present in visibilities."
  *         raise ValueError(msg)             # <<<<<<<<<<<<<<
@@ -2806,7 +2806,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __PYX_ERR(0, 154, __pyx_L1_error)
 
-    /* "dnb.pyx":152
+    /* "dnb_int32.pyx":152
  *     # Now chan_pairs[auto_inds[i]]==(i,i) (chan_pairs:=[(chan_a,chan_b)]).
  * 
  *     if np.any(auto_inds<0):             # <<<<<<<<<<<<<<
@@ -2815,7 +2815,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
  */
   }
 
-  /* "dnb.pyx":157
+  /* "dnb_int32.pyx":157
  * 
  *     cdef np.ndarray[np.int32_t, ndim=2, mode='c'] auto_vis
  *     auto_vis = np.empty((nchan, ntime), np.int32)             # <<<<<<<<<<<<<<
@@ -2916,7 +2916,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_v_auto_vis = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "dnb.pyx":160
+  /* "dnb_int32.pyx":160
  * 
  *     # Allow attribute access to struct members.
  *     vis = vis.view(np.recarray)             # <<<<<<<<<<<<<<
@@ -2951,10 +2951,10 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
   {
     __Pyx_BufFmt_StackElem __pyx_stack[2];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_vis.rcbuffer->pybuffer);
-    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vis.rcbuffer->pybuffer, (PyObject*)__pyx_t_19, &__Pyx_TypeInfo_nn___pyx_t_3dnb_VIS_DTYPE_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack);
+    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vis.rcbuffer->pybuffer, (PyObject*)__pyx_t_19, &__Pyx_TypeInfo_nn___pyx_t_9dnb_int32_VIS_DTYPE_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack);
     if (unlikely(__pyx_t_7 < 0)) {
       PyErr_Fetch(&__pyx_t_10, &__pyx_t_11, &__pyx_t_12);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vis.rcbuffer->pybuffer, (PyObject*)__pyx_v_vis, &__Pyx_TypeInfo_nn___pyx_t_3dnb_VIS_DTYPE_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vis.rcbuffer->pybuffer, (PyObject*)__pyx_v_vis, &__Pyx_TypeInfo_nn___pyx_t_9dnb_int32_VIS_DTYPE_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_10); Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_12);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -2969,7 +2969,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_DECREF_SET(__pyx_v_vis, ((PyArrayObject *)__pyx_t_2));
   __pyx_t_2 = 0;
 
-  /* "dnb.pyx":163
+  /* "dnb_int32.pyx":163
  * 
  *     cdef np.ndarray[VIS_DTYPE_t, ndim=3, mode='c'] vis_r
  *     vis_r = np.empty_like(vis)             # <<<<<<<<<<<<<<
@@ -3001,10 +3001,10 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
   {
     __Pyx_BufFmt_StackElem __pyx_stack[2];
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_vis_r.rcbuffer->pybuffer);
-    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vis_r.rcbuffer->pybuffer, (PyObject*)__pyx_t_20, &__Pyx_TypeInfo_nn___pyx_t_3dnb_VIS_DTYPE_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack);
+    __pyx_t_7 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vis_r.rcbuffer->pybuffer, (PyObject*)__pyx_t_20, &__Pyx_TypeInfo_nn___pyx_t_9dnb_int32_VIS_DTYPE_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack);
     if (unlikely(__pyx_t_7 < 0)) {
       PyErr_Fetch(&__pyx_t_12, &__pyx_t_11, &__pyx_t_10);
-      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vis_r.rcbuffer->pybuffer, (PyObject*)__pyx_v_vis_r, &__Pyx_TypeInfo_nn___pyx_t_3dnb_VIS_DTYPE_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) {
+      if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_vis_r.rcbuffer->pybuffer, (PyObject*)__pyx_v_vis_r, &__Pyx_TypeInfo_nn___pyx_t_9dnb_int32_VIS_DTYPE_t, PyBUF_FORMAT| PyBUF_C_CONTIGUOUS, 3, 0, __pyx_stack) == -1)) {
         Py_XDECREF(__pyx_t_12); Py_XDECREF(__pyx_t_11); Py_XDECREF(__pyx_t_10);
         __Pyx_RaiseBufferFallbackError();
       } else {
@@ -3019,7 +3019,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_v_vis_r = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "dnb.pyx":168
+  /* "dnb_int32.pyx":168
  *     cdef int is_auto
  * 
  *     for jj in xrange(vis.shape[0]):             # <<<<<<<<<<<<<<
@@ -3031,7 +3031,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
   for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_22; __pyx_t_7+=1) {
     __pyx_v_jj = __pyx_t_7;
 
-    /* "dnb.pyx":170
+    /* "dnb_int32.pyx":170
  *     for jj in xrange(vis.shape[0]):
  *         # auto_vis = vis[nfreq=jj][chan_pair=(0:nchan,0:nchan)][ntime=:].r
  *         auto_vis[:] = vis[jj,auto_inds].r             # <<<<<<<<<<<<<<
@@ -3057,7 +3057,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
     if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_auto_vis), __pyx_slice_, __pyx_t_8) < 0)) __PYX_ERR(0, 170, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-    /* "dnb.pyx":172
+    /* "dnb_int32.pyx":172
  *         auto_vis[:] = vis[jj,auto_inds].r
  * 
  *         for ii in xrange(nprod):             # <<<<<<<<<<<<<<
@@ -3069,7 +3069,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
     for (__pyx_t_23 = 0; __pyx_t_23 < __pyx_t_14; __pyx_t_23+=1) {
       __pyx_v_ii = __pyx_t_23;
 
-      /* "dnb.pyx":174
+      /* "dnb_int32.pyx":174
  *         for ii in xrange(nprod):
  *             # nprod=ii <=> chan_pair=(n_a,n_b) := (chan_a[ii],chan_b[ii]).
  *             n_a = chan_a[ii]             # <<<<<<<<<<<<<<
@@ -3079,7 +3079,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
       __pyx_t_16 = __pyx_v_ii;
       __pyx_v_n_a = (*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_int64_t *, __pyx_pybuffernd_chan_a.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_chan_a.diminfo[0].strides));
 
-      /* "dnb.pyx":175
+      /* "dnb_int32.pyx":175
  *             # nprod=ii <=> chan_pair=(n_a,n_b) := (chan_a[ii],chan_b[ii]).
  *             n_a = chan_a[ii]
  *             n_b = chan_b[ii]             # <<<<<<<<<<<<<<
@@ -3089,7 +3089,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
       __pyx_t_16 = __pyx_v_ii;
       __pyx_v_n_b = (*__Pyx_BufPtrCContig1d(__pyx_t_5numpy_int64_t *, __pyx_pybuffernd_chan_b.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_chan_b.diminfo[0].strides));
 
-      /* "dnb.pyx":176
+      /* "dnb_int32.pyx":176
  *             n_a = chan_a[ii]
  *             n_b = chan_b[ii]
  *             is_auto = n_a==n_b             # <<<<<<<<<<<<<<
@@ -3098,7 +3098,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
  */
       __pyx_v_is_auto = (__pyx_v_n_a == __pyx_v_n_b);
 
-      /* "dnb.pyx":178
+      /* "dnb_int32.pyx":178
  *             is_auto = n_a==n_b
  * 
  *             for kk in xrange(ntime):             # <<<<<<<<<<<<<<
@@ -3110,7 +3110,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
       for (__pyx_t_26 = 0; __pyx_t_26 < __pyx_t_25; __pyx_t_26+=1) {
         __pyx_v_kk = __pyx_t_26;
 
-        /* "dnb.pyx":183
+        /* "dnb_int32.pyx":183
  *                 # auto_a=vis[nfreq=jj][chan_pair=(n_a,n_a)][ntime=kk].r
  *                 # auto_b=vis[nfreq=jj][chan_pair=(n_b,n_b)][ntime=kk].r
  *                 auto_a = auto_vis[n_a,kk]             # <<<<<<<<<<<<<<
@@ -3121,7 +3121,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
         __pyx_t_16 = __pyx_v_kk;
         __pyx_v_auto_a = (*__Pyx_BufPtrCContig2d(__pyx_t_5numpy_int32_t *, __pyx_pybuffernd_auto_vis.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_auto_vis.diminfo[0].strides, __pyx_t_16, __pyx_pybuffernd_auto_vis.diminfo[1].strides));
 
-        /* "dnb.pyx":184
+        /* "dnb_int32.pyx":184
  *                 # auto_b=vis[nfreq=jj][chan_pair=(n_b,n_b)][ntime=kk].r
  *                 auto_a = auto_vis[n_a,kk]
  *                 auto_b = auto_vis[n_b,kk]             # <<<<<<<<<<<<<<
@@ -3132,7 +3132,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
         __pyx_t_16 = __pyx_v_kk;
         __pyx_v_auto_b = (*__Pyx_BufPtrCContig2d(__pyx_t_5numpy_int32_t *, __pyx_pybuffernd_auto_vis.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_auto_vis.diminfo[0].strides, __pyx_t_16, __pyx_pybuffernd_auto_vis.diminfo[1].strides));
 
-        /* "dnb.pyx":192
+        /* "dnb_int32.pyx":192
  *                 # gran**2 < 12*f*s**2.
  *                 # see arXiv:1503.00638v3 [astro-ph.IM] 16 Sep 2015.
  *                 if is_auto:             # <<<<<<<<<<<<<<
@@ -3142,7 +3142,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
         __pyx_t_1 = (__pyx_v_is_auto != 0);
         if (__pyx_t_1) {
 
-          /* "dnb.pyx":197
+          /* "dnb_int32.pyx":197
  *                     # gran**2 < 12*f*(auto_a*auto_b)/nsamp,
  *                     # gran**2 < auto_a*auto_b*(12*f/nsamp).
  *                     gran_max_sq = auto_a*auto_b*gran_sq_factor             # <<<<<<<<<<<<<<
@@ -3151,7 +3151,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
  */
           __pyx_v_gran_max_sq = ((__pyx_v_auto_a * __pyx_v_auto_b) * __pyx_v_gran_sq_factor);
 
-          /* "dnb.pyx":200
+          /* "dnb_int32.pyx":200
  *                     # Truncating the float rounds granularities.
  *                     # gran < sqrt(12*f*s**2).
  *                     gran_max = <np.int32_t> sqrt(gran_max_sq)             # <<<<<<<<<<<<<<
@@ -3160,7 +3160,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
  */
           __pyx_v_gran_max = ((__pyx_t_5numpy_int32_t)sqrt(__pyx_v_gran_max_sq));
 
-          /* "dnb.pyx":202
+          /* "dnb_int32.pyx":202
  *                     gran_max = <np.int32_t> sqrt(gran_max_sq)
  *                     # Round.
  *                     vis_r[jj,ii,kk].r = bit_round(vis[jj,ii,kk].r, gran_max)             # <<<<<<<<<<<<<<
@@ -3173,9 +3173,9 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
           __pyx_t_28 = __pyx_v_jj;
           __pyx_t_29 = __pyx_v_ii;
           __pyx_t_30 = __pyx_v_kk;
-          (*__Pyx_BufPtrCContig3d(__pyx_t_3dnb_VIS_DTYPE_t *, __pyx_pybuffernd_vis_r.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_vis_r.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_vis_r.diminfo[1].strides, __pyx_t_30, __pyx_pybuffernd_vis_r.diminfo[2].strides)).r = __pyx_f_3dnb_bit_round((*__Pyx_BufPtrCContig3d(__pyx_t_3dnb_VIS_DTYPE_t *, __pyx_pybuffernd_vis.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_vis.diminfo[0].strides, __pyx_t_15, __pyx_pybuffernd_vis.diminfo[1].strides, __pyx_t_27, __pyx_pybuffernd_vis.diminfo[2].strides)).r, __pyx_v_gran_max);
+          (*__Pyx_BufPtrCContig3d(__pyx_t_9dnb_int32_VIS_DTYPE_t *, __pyx_pybuffernd_vis_r.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_vis_r.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_vis_r.diminfo[1].strides, __pyx_t_30, __pyx_pybuffernd_vis_r.diminfo[2].strides)).r = __pyx_f_9dnb_int32_bit_round((*__Pyx_BufPtrCContig3d(__pyx_t_9dnb_int32_VIS_DTYPE_t *, __pyx_pybuffernd_vis.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_vis.diminfo[0].strides, __pyx_t_15, __pyx_pybuffernd_vis.diminfo[1].strides, __pyx_t_27, __pyx_pybuffernd_vis.diminfo[2].strides)).r, __pyx_v_gran_max);
 
-          /* "dnb.pyx":203
+          /* "dnb_int32.pyx":203
  *                     # Round.
  *                     vis_r[jj,ii,kk].r = bit_round(vis[jj,ii,kk].r, gran_max)
  *                     vis_r[jj,ii,kk].i = 0             # <<<<<<<<<<<<<<
@@ -3185,9 +3185,9 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
           __pyx_t_30 = __pyx_v_jj;
           __pyx_t_29 = __pyx_v_ii;
           __pyx_t_28 = __pyx_v_kk;
-          (*__Pyx_BufPtrCContig3d(__pyx_t_3dnb_VIS_DTYPE_t *, __pyx_pybuffernd_vis_r.rcbuffer->pybuffer.buf, __pyx_t_30, __pyx_pybuffernd_vis_r.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_vis_r.diminfo[1].strides, __pyx_t_28, __pyx_pybuffernd_vis_r.diminfo[2].strides)).i = 0;
+          (*__Pyx_BufPtrCContig3d(__pyx_t_9dnb_int32_VIS_DTYPE_t *, __pyx_pybuffernd_vis_r.rcbuffer->pybuffer.buf, __pyx_t_30, __pyx_pybuffernd_vis_r.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_vis_r.diminfo[1].strides, __pyx_t_28, __pyx_pybuffernd_vis_r.diminfo[2].strides)).i = 0;
 
-          /* "dnb.pyx":192
+          /* "dnb_int32.pyx":192
  *                 # gran**2 < 12*f*s**2.
  *                 # see arXiv:1503.00638v3 [astro-ph.IM] 16 Sep 2015.
  *                 if is_auto:             # <<<<<<<<<<<<<<
@@ -3197,7 +3197,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
           goto __pyx_L18;
         }
 
-        /* "dnb.pyx":209
+        /* "dnb_int32.pyx":209
  *                     # gran**2 < 12*f*(auto_a*auto_b)/(2*nsamp),
  *                     # gran**2 < auto_a*auto_b*(12*f/nsamp)/2.
  *                     gran_max_sq = auto_a*auto_b*half_gran_sq_factor             # <<<<<<<<<<<<<<
@@ -3207,7 +3207,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
         /*else*/ {
           __pyx_v_gran_max_sq = ((__pyx_v_auto_a * __pyx_v_auto_b) * __pyx_v_half_gran_sq_factor);
 
-          /* "dnb.pyx":212
+          /* "dnb_int32.pyx":212
  *                     # Truncating the float rounds granularities.
  *                     # gran < sqrt(12*f*s**2).
  *                     gran_max = <np.int32_t> sqrt(gran_max_sq)             # <<<<<<<<<<<<<<
@@ -3216,7 +3216,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
  */
           __pyx_v_gran_max = ((__pyx_t_5numpy_int32_t)sqrt(__pyx_v_gran_max_sq));
 
-          /* "dnb.pyx":214
+          /* "dnb_int32.pyx":214
  *                     gran_max = <np.int32_t> sqrt(gran_max_sq)
  *                     # Round.
  *                     vis_r[jj,ii,kk].r = bit_round(vis[jj,ii,kk].r, gran_max)             # <<<<<<<<<<<<<<
@@ -3229,9 +3229,9 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
           __pyx_t_27 = __pyx_v_jj;
           __pyx_t_15 = __pyx_v_ii;
           __pyx_t_16 = __pyx_v_kk;
-          (*__Pyx_BufPtrCContig3d(__pyx_t_3dnb_VIS_DTYPE_t *, __pyx_pybuffernd_vis_r.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_vis_r.diminfo[0].strides, __pyx_t_15, __pyx_pybuffernd_vis_r.diminfo[1].strides, __pyx_t_16, __pyx_pybuffernd_vis_r.diminfo[2].strides)).r = __pyx_f_3dnb_bit_round((*__Pyx_BufPtrCContig3d(__pyx_t_3dnb_VIS_DTYPE_t *, __pyx_pybuffernd_vis.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_vis.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_vis.diminfo[1].strides, __pyx_t_30, __pyx_pybuffernd_vis.diminfo[2].strides)).r, __pyx_v_gran_max);
+          (*__Pyx_BufPtrCContig3d(__pyx_t_9dnb_int32_VIS_DTYPE_t *, __pyx_pybuffernd_vis_r.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_vis_r.diminfo[0].strides, __pyx_t_15, __pyx_pybuffernd_vis_r.diminfo[1].strides, __pyx_t_16, __pyx_pybuffernd_vis_r.diminfo[2].strides)).r = __pyx_f_9dnb_int32_bit_round((*__Pyx_BufPtrCContig3d(__pyx_t_9dnb_int32_VIS_DTYPE_t *, __pyx_pybuffernd_vis.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_vis.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_vis.diminfo[1].strides, __pyx_t_30, __pyx_pybuffernd_vis.diminfo[2].strides)).r, __pyx_v_gran_max);
 
-          /* "dnb.pyx":215
+          /* "dnb_int32.pyx":215
  *                     # Round.
  *                     vis_r[jj,ii,kk].r = bit_round(vis[jj,ii,kk].r, gran_max)
  *                     vis_r[jj,ii,kk].i = bit_round(vis[jj,ii,kk].i, gran_max)             # <<<<<<<<<<<<<<
@@ -3244,14 +3244,14 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
           __pyx_t_30 = __pyx_v_jj;
           __pyx_t_29 = __pyx_v_ii;
           __pyx_t_28 = __pyx_v_kk;
-          (*__Pyx_BufPtrCContig3d(__pyx_t_3dnb_VIS_DTYPE_t *, __pyx_pybuffernd_vis_r.rcbuffer->pybuffer.buf, __pyx_t_30, __pyx_pybuffernd_vis_r.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_vis_r.diminfo[1].strides, __pyx_t_28, __pyx_pybuffernd_vis_r.diminfo[2].strides)).i = __pyx_f_3dnb_bit_round((*__Pyx_BufPtrCContig3d(__pyx_t_3dnb_VIS_DTYPE_t *, __pyx_pybuffernd_vis.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_vis.diminfo[0].strides, __pyx_t_15, __pyx_pybuffernd_vis.diminfo[1].strides, __pyx_t_27, __pyx_pybuffernd_vis.diminfo[2].strides)).i, __pyx_v_gran_max);
+          (*__Pyx_BufPtrCContig3d(__pyx_t_9dnb_int32_VIS_DTYPE_t *, __pyx_pybuffernd_vis_r.rcbuffer->pybuffer.buf, __pyx_t_30, __pyx_pybuffernd_vis_r.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_vis_r.diminfo[1].strides, __pyx_t_28, __pyx_pybuffernd_vis_r.diminfo[2].strides)).i = __pyx_f_9dnb_int32_bit_round((*__Pyx_BufPtrCContig3d(__pyx_t_9dnb_int32_VIS_DTYPE_t *, __pyx_pybuffernd_vis.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_vis.diminfo[0].strides, __pyx_t_15, __pyx_pybuffernd_vis.diminfo[1].strides, __pyx_t_27, __pyx_pybuffernd_vis.diminfo[2].strides)).i, __pyx_v_gran_max);
         }
         __pyx_L18:;
       }
     }
   }
 
-  /* "dnb.pyx":217
+  /* "dnb_int32.pyx":217
  *                     vis_r[jj,ii,kk].i = bit_round(vis[jj,ii,kk].i, gran_max)
  * 
  *     return vis_r             # <<<<<<<<<<<<<<
@@ -3263,7 +3263,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_r = ((PyObject *)__pyx_v_vis_r);
   goto __pyx_L0;
 
-  /* "dnb.pyx":72
+  /* "dnb_int32.pyx":72
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * def reduce_precision(             # <<<<<<<<<<<<<<
@@ -3290,7 +3290,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_vis.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_vis_r.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("dnb.reduce_precision", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("dnb_int32.reduce_precision", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -3311,7 +3311,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
   return __pyx_r;
 }
 
-/* "dnb.pyx":220
+/* "dnb_int32.pyx":220
  * 
  * 
  * cdef inline np.int32_t bit_round(np.int32_t val, np.int32_t gran_max):             # <<<<<<<<<<<<<<
@@ -3319,7 +3319,7 @@ static PyObject *__pyx_pf_3dnb_reduce_precision(CYTHON_UNUSED PyObject *__pyx_se
  * 
  */
 
-static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5numpy_int32_t __pyx_v_val, __pyx_t_5numpy_int32_t __pyx_v_gran_max) {
+static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_9dnb_int32_bit_round(__pyx_t_5numpy_int32_t __pyx_v_val, __pyx_t_5numpy_int32_t __pyx_v_gran_max) {
   __pyx_t_5numpy_int32_t __pyx_v_gran;
   __pyx_t_5numpy_int32_t __pyx_v_bitmask;
   __pyx_t_5numpy_int32_t __pyx_v_tie;
@@ -3333,7 +3333,7 @@ static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5nump
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("bit_round", 0);
 
-  /* "dnb.pyx":227
+  /* "dnb_int32.pyx":227
  *     """
  * 
  *     if (gran_max > 1073741824):             # <<<<<<<<<<<<<<
@@ -3343,7 +3343,7 @@ static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5nump
   __pyx_t_1 = ((__pyx_v_gran_max > 0x40000000) != 0);
   if (unlikely(__pyx_t_1)) {
 
-    /* "dnb.pyx":228
+    /* "dnb_int32.pyx":228
  * 
  *     if (gran_max > 1073741824):
  *         raise ValueError('Sorry, maximum of granularity is too large.')             # <<<<<<<<<<<<<<
@@ -3356,7 +3356,7 @@ static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5nump
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __PYX_ERR(0, 228, __pyx_L1_error)
 
-    /* "dnb.pyx":227
+    /* "dnb_int32.pyx":227
  *     """
  * 
  *     if (gran_max > 1073741824):             # <<<<<<<<<<<<<<
@@ -3365,7 +3365,7 @@ static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5nump
  */
   }
 
-  /* "dnb.pyx":235
+  /* "dnb_int32.pyx":235
  * 
  *     # gran_max == 000...01????...?
  *     cdef np.int32_t gran = gran_max >> 1             # <<<<<<<<<<<<<<
@@ -3374,7 +3374,7 @@ static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5nump
  */
   __pyx_v_gran = (__pyx_v_gran_max >> 1);
 
-  /* "dnb.pyx":238
+  /* "dnb_int32.pyx":238
  *     # gran == 000...001???...?
  * 
  *     gran |= gran >> 1             # <<<<<<<<<<<<<<
@@ -3383,7 +3383,7 @@ static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5nump
  */
   __pyx_v_gran = (__pyx_v_gran | (__pyx_v_gran >> 1));
 
-  /* "dnb.pyx":240
+  /* "dnb_int32.pyx":240
  *     gran |= gran >> 1
  *     # gran == 000...0011???...?
  *     gran |= gran >> 2             # <<<<<<<<<<<<<<
@@ -3392,7 +3392,7 @@ static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5nump
  */
   __pyx_v_gran = (__pyx_v_gran | (__pyx_v_gran >> 2));
 
-  /* "dnb.pyx":242
+  /* "dnb_int32.pyx":242
  *     gran |= gran >> 2
  *     # gran == 000...001111???...?
  *     gran |= gran >> 4             # <<<<<<<<<<<<<<
@@ -3401,7 +3401,7 @@ static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5nump
  */
   __pyx_v_gran = (__pyx_v_gran | (__pyx_v_gran >> 4));
 
-  /* "dnb.pyx":244
+  /* "dnb_int32.pyx":244
  *     gran |= gran >> 4
  *     # gran == 000...0011111111???...?
  *     gran |= gran >> 8             # <<<<<<<<<<<<<<
@@ -3410,7 +3410,7 @@ static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5nump
  */
   __pyx_v_gran = (__pyx_v_gran | (__pyx_v_gran >> 8));
 
-  /* "dnb.pyx":248
+  /* "dnb_int32.pyx":248
  * 
  *     # Bitmask selects bits to be rounded.
  *     cdef np.int32_t bitmask = gran | (gran >> 16)             # <<<<<<<<<<<<<<
@@ -3419,7 +3419,7 @@ static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5nump
  */
   __pyx_v_bitmask = (__pyx_v_gran | (__pyx_v_gran >> 16));
 
-  /* "dnb.pyx":252
+  /* "dnb_int32.pyx":252
  *     # if gran_max <= 1, bitmask == 0
  * 
  *     gran = bitmask + 1             # <<<<<<<<<<<<<<
@@ -3428,7 +3428,7 @@ static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5nump
  */
   __pyx_v_gran = (__pyx_v_bitmask + 1);
 
-  /* "dnb.pyx":258
+  /* "dnb_int32.pyx":258
  *     # Determine if there is a round-up/round-down tie.
  *     # This operation gets the "gran == 1" case correct (non tie).
  *     cdef np.int32_t tie = ((val & bitmask) << 1) == gran             # <<<<<<<<<<<<<<
@@ -3437,7 +3437,7 @@ static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5nump
  */
   __pyx_v_tie = (((__pyx_v_val & __pyx_v_bitmask) << 1) == __pyx_v_gran);
 
-  /* "dnb.pyx":267
+  /* "dnb_int32.pyx":267
  * 
  *     # The actual rounding.
  *     cdef np.int32_t val_t = (val - (gran >> 1)) | bitmask             # <<<<<<<<<<<<<<
@@ -3446,7 +3446,7 @@ static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5nump
  */
   __pyx_v_val_t = ((__pyx_v_val - (__pyx_v_gran >> 1)) | __pyx_v_bitmask);
 
-  /* "dnb.pyx":278
+  /* "dnb_int32.pyx":278
  *     # Special situation:
  *     # if gran_max <= 1, (val - (gran >> 1)) | bitmask == val !
  *     val_t += (gran_max >> 1) != 0             # <<<<<<<<<<<<<<
@@ -3455,7 +3455,7 @@ static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5nump
  */
   __pyx_v_val_t = (__pyx_v_val_t + ((__pyx_v_gran_max >> 1) != 0));
 
-  /* "dnb.pyx":287
+  /* "dnb_int32.pyx":287
  *     # if tie == 1, val == ???...??1000...0
  *     # val_t == (???...??+1)0000...0
  *     val_t -= val_t & (tie * gran)             # <<<<<<<<<<<<<<
@@ -3464,7 +3464,7 @@ static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5nump
  */
   __pyx_v_val_t = (__pyx_v_val_t - (__pyx_v_val_t & (__pyx_v_tie * __pyx_v_gran)));
 
-  /* "dnb.pyx":301
+  /* "dnb_int32.pyx":301
  *     # which means rounding "by" gran then truncating "by" gran*2.
  * 
  *     return val_t             # <<<<<<<<<<<<<<
@@ -3474,7 +3474,7 @@ static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5nump
   __pyx_r = __pyx_v_val_t;
   goto __pyx_L0;
 
-  /* "dnb.pyx":220
+  /* "dnb_int32.pyx":220
  * 
  * 
  * cdef inline np.int32_t bit_round(np.int32_t val, np.int32_t gran_max):             # <<<<<<<<<<<<<<
@@ -3485,14 +3485,14 @@ static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5nump
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_WriteUnraisable("dnb.bit_round", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("dnb_int32.bit_round", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "dnb.pyx":304
+/* "dnb_int32.pyx":304
  * 
  * 
  * def bit_round_py(np.int32_t val, np.int32_t gran_max):             # <<<<<<<<<<<<<<
@@ -3501,10 +3501,10 @@ static CYTHON_INLINE __pyx_t_5numpy_int32_t __pyx_f_3dnb_bit_round(__pyx_t_5nump
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3dnb_3bit_round_py(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_3dnb_2bit_round_py[] = "Python wrapper of C version, for testing.";
-static PyMethodDef __pyx_mdef_3dnb_3bit_round_py = {"bit_round_py", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_3dnb_3bit_round_py, METH_VARARGS|METH_KEYWORDS, __pyx_doc_3dnb_2bit_round_py};
-static PyObject *__pyx_pw_3dnb_3bit_round_py(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9dnb_int32_3bit_round_py(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_9dnb_int32_2bit_round_py[] = "Python wrapper of C version, for testing.";
+static PyMethodDef __pyx_mdef_9dnb_int32_3bit_round_py = {"bit_round_py", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9dnb_int32_3bit_round_py, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9dnb_int32_2bit_round_py};
+static PyObject *__pyx_pw_9dnb_int32_3bit_round_py(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __pyx_t_5numpy_int32_t __pyx_v_val;
   __pyx_t_5numpy_int32_t __pyx_v_gran_max;
   int __pyx_lineno = 0;
@@ -3555,18 +3555,18 @@ static PyObject *__pyx_pw_3dnb_3bit_round_py(PyObject *__pyx_self, PyObject *__p
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("bit_round_py", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 304, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("dnb.bit_round_py", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("dnb_int32.bit_round_py", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3dnb_2bit_round_py(__pyx_self, __pyx_v_val, __pyx_v_gran_max);
+  __pyx_r = __pyx_pf_9dnb_int32_2bit_round_py(__pyx_self, __pyx_v_val, __pyx_v_gran_max);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3dnb_2bit_round_py(CYTHON_UNUSED PyObject *__pyx_self, __pyx_t_5numpy_int32_t __pyx_v_val, __pyx_t_5numpy_int32_t __pyx_v_gran_max) {
+static PyObject *__pyx_pf_9dnb_int32_2bit_round_py(CYTHON_UNUSED PyObject *__pyx_self, __pyx_t_5numpy_int32_t __pyx_v_val, __pyx_t_5numpy_int32_t __pyx_v_gran_max) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3575,7 +3575,7 @@ static PyObject *__pyx_pf_3dnb_2bit_round_py(CYTHON_UNUSED PyObject *__pyx_self,
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("bit_round_py", 0);
 
-  /* "dnb.pyx":306
+  /* "dnb_int32.pyx":306
  * def bit_round_py(np.int32_t val, np.int32_t gran_max):
  *     """Python wrapper of C version, for testing."""
  *     return bit_round(val, gran_max)             # <<<<<<<<<<<<<<
@@ -3583,13 +3583,13 @@ static PyObject *__pyx_pf_3dnb_2bit_round_py(CYTHON_UNUSED PyObject *__pyx_self,
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_npy_int32(__pyx_f_3dnb_bit_round(__pyx_v_val, __pyx_v_gran_max)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 306, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_npy_int32(__pyx_f_9dnb_int32_bit_round(__pyx_v_val, __pyx_v_gran_max)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 306, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "dnb.pyx":304
+  /* "dnb_int32.pyx":304
  * 
  * 
  * def bit_round_py(np.int32_t val, np.int32_t gran_max):             # <<<<<<<<<<<<<<
@@ -3600,7 +3600,7 @@ static PyObject *__pyx_pf_3dnb_2bit_round_py(CYTHON_UNUSED PyObject *__pyx_self,
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("dnb.bit_round_py", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("dnb_int32.bit_round_py", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3608,7 +3608,7 @@ static PyObject *__pyx_pf_3dnb_2bit_round_py(CYTHON_UNUSED PyObject *__pyx_self,
   return __pyx_r;
 }
 
-/* "dnb.pyx":309
+/* "dnb_int32.pyx":309
  * 
  * 
  * def test(*, l=False):             # <<<<<<<<<<<<<<
@@ -3617,10 +3617,10 @@ static PyObject *__pyx_pf_3dnb_2bit_round_py(CYTHON_UNUSED PyObject *__pyx_self,
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3dnb_5test(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_3dnb_4test[] = "Generate mock data then reduce its precision.";
-static PyMethodDef __pyx_mdef_3dnb_5test = {"test", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_3dnb_5test, METH_VARARGS|METH_KEYWORDS, __pyx_doc_3dnb_4test};
-static PyObject *__pyx_pw_3dnb_5test(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_9dnb_int32_5test(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_9dnb_int32_4test[] = "Generate mock data then reduce its precision.";
+static PyMethodDef __pyx_mdef_9dnb_int32_5test = {"test", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_9dnb_int32_5test, METH_VARARGS|METH_KEYWORDS, __pyx_doc_9dnb_int32_4test};
+static PyObject *__pyx_pw_9dnb_int32_5test(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_l = 0;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -3658,18 +3658,18 @@ static PyObject *__pyx_pw_3dnb_5test(PyObject *__pyx_self, PyObject *__pyx_args,
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("test", 1, 0, 0, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 309, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("dnb.test", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("dnb_int32.test", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_3dnb_4test(__pyx_self, __pyx_v_l);
+  __pyx_r = __pyx_pf_9dnb_int32_4test(__pyx_self, __pyx_v_l);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_l) {
+static PyObject *__pyx_pf_9dnb_int32_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_l) {
   PyObject *__pyx_v_random = NULL;
   PyObject *__pyx_v_time = NULL;
   PyObject *__pyx_v_nchan = NULL;
@@ -3719,7 +3719,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("test", 0);
 
-  /* "dnb.pyx":312
+  /* "dnb_int32.pyx":312
  *     """Generate mock data then reduce its precision."""
  * 
  *     from numpy import random             # <<<<<<<<<<<<<<
@@ -3741,7 +3741,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "dnb.pyx":313
+  /* "dnb_int32.pyx":313
  * 
  *     from numpy import random
  *     import time             # <<<<<<<<<<<<<<
@@ -3753,7 +3753,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __pyx_v_time = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "dnb.pyx":316
+  /* "dnb_int32.pyx":316
  * 
  *     # Parameters.
  *     nchan = 16          # Number of channels correlated             # <<<<<<<<<<<<<<
@@ -3763,7 +3763,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __Pyx_INCREF(__pyx_int_16);
   __pyx_v_nchan = __pyx_int_16;
 
-  /* "dnb.pyx":317
+  /* "dnb_int32.pyx":317
  *     # Parameters.
  *     nchan = 16          # Number of channels correlated
  *     nsamples = 100      # Number of samples integrated, delta_f*delta_t             # <<<<<<<<<<<<<<
@@ -3773,7 +3773,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __Pyx_INCREF(__pyx_int_100);
   __pyx_v_nsamples = __pyx_int_100;
 
-  /* "dnb.pyx":318
+  /* "dnb_int32.pyx":318
  *     nchan = 16          # Number of channels correlated
  *     nsamples = 100      # Number of samples integrated, delta_f*delta_t
  *     Tsys = 50           # System temperature             # <<<<<<<<<<<<<<
@@ -3783,7 +3783,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __Pyx_INCREF(__pyx_int_50);
   __pyx_v_Tsys = __pyx_int_50;
 
-  /* "dnb.pyx":319
+  /* "dnb_int32.pyx":319
  *     nsamples = 100      # Number of samples integrated, delta_f*delta_t
  *     Tsys = 50           # System temperature
  *     f = 0.01            # Precision reduction parameter             # <<<<<<<<<<<<<<
@@ -3792,7 +3792,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
  */
   __pyx_v_f = 0.01;
 
-  /* "dnb.pyx":320
+  /* "dnb_int32.pyx":320
  *     Tsys = 50           # System temperature
  *     f = 0.01            # Precision reduction parameter
  *     nfreq = 5           # Added dimensionality, spectral frequencies.             # <<<<<<<<<<<<<<
@@ -3802,7 +3802,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __Pyx_INCREF(__pyx_int_5);
   __pyx_v_nfreq = __pyx_int_5;
 
-  /* "dnb.pyx":321
+  /* "dnb_int32.pyx":321
  *     f = 0.01            # Precision reduction parameter
  *     nfreq = 5           # Added dimensionality, spectral frequencies.
  *     ntime = 1000        # Added dimensionality, temporal integrations.             # <<<<<<<<<<<<<<
@@ -3812,7 +3812,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __Pyx_INCREF(__pyx_int_1000);
   __pyx_v_ntime = __pyx_int_1000;
 
-  /* "dnb.pyx":324
+  /* "dnb_int32.pyx":324
  * 
  *     # Made up channel dependant gain.
  *     gain_chan = np.arange(nchan) + nchan             # <<<<<<<<<<<<<<
@@ -3845,7 +3845,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __pyx_v_gain_chan = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "dnb.pyx":326
+  /* "dnb_int32.pyx":326
  *     gain_chan = np.arange(nchan) + nchan
  *     # Made up frequency dependant gain.
  *     bandpass = (np.arange(nfreq) + nfreq)**2             # <<<<<<<<<<<<<<
@@ -3881,7 +3881,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __pyx_v_bandpass = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "dnb.pyx":330
+  /* "dnb_int32.pyx":330
  *     # Generate mock data. Model is pure uncorrelated receiver noise.
  *     # Auto correlations are a number, everything else is noise.
  *     nprod = (nchan * (nchan + 1)) // 2             # <<<<<<<<<<<<<<
@@ -3899,7 +3899,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __pyx_v_nprod = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "dnb.pyx":331
+  /* "dnb_int32.pyx":331
  *     # Auto correlations are a number, everything else is noise.
  *     nprod = (nchan * (nchan + 1)) // 2
  *     vis = np.recarray((nfreq, nprod, ntime), VIS_DTYPE)             # <<<<<<<<<<<<<<
@@ -3976,7 +3976,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __pyx_v_vis = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "dnb.pyx":332
+  /* "dnb_int32.pyx":332
  *     nprod = (nchan * (nchan + 1)) // 2
  *     vis = np.recarray((nfreq, nprod, ntime), VIS_DTYPE)
  *     chan_a = np.empty(nprod, np.int64)             # <<<<<<<<<<<<<<
@@ -4043,7 +4043,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __pyx_v_chan_a = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "dnb.pyx":333
+  /* "dnb_int32.pyx":333
  *     vis = np.recarray((nfreq, nprod, ntime), VIS_DTYPE)
  *     chan_a = np.empty(nprod, np.int64)
  *     chan_b = np.empty(nprod, np.int64)             # <<<<<<<<<<<<<<
@@ -4110,7 +4110,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __pyx_v_chan_b = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "dnb.pyx":335
+  /* "dnb_int32.pyx":335
  *     chan_b = np.empty(nprod, np.int64)
  * 
  *     for ff in range(nfreq):             # <<<<<<<<<<<<<<
@@ -4162,7 +4162,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
     __Pyx_XDECREF_SET(__pyx_v_ff, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "dnb.pyx":336
+    /* "dnb_int32.pyx":336
  * 
  *     for ff in range(nfreq):
  *         kk = 0             # <<<<<<<<<<<<<<
@@ -4172,7 +4172,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
     __Pyx_INCREF(__pyx_int_0);
     __Pyx_XDECREF_SET(__pyx_v_kk, __pyx_int_0);
 
-    /* "dnb.pyx":337
+    /* "dnb_int32.pyx":337
  *     for ff in range(nfreq):
  *         kk = 0
  *         for ii in range(nchan):             # <<<<<<<<<<<<<<
@@ -4224,7 +4224,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
       __Pyx_XDECREF_SET(__pyx_v_ii, __pyx_t_3);
       __pyx_t_3 = 0;
 
-      /* "dnb.pyx":338
+      /* "dnb_int32.pyx":338
  *         kk = 0
  *         for ii in range(nchan):
  *             for jj in range(ii, nchan):             # <<<<<<<<<<<<<<
@@ -4285,7 +4285,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
         __Pyx_XDECREF_SET(__pyx_v_jj, __pyx_t_4);
         __pyx_t_4 = 0;
 
-        /* "dnb.pyx":339
+        /* "dnb_int32.pyx":339
  *         for ii in range(nchan):
  *             for jj in range(ii, nchan):
  *                 chan_a[kk] = ii             # <<<<<<<<<<<<<<
@@ -4294,7 +4294,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
  */
         if (unlikely(PyObject_SetItem(__pyx_v_chan_a, __pyx_v_kk, __pyx_v_ii) < 0)) __PYX_ERR(0, 339, __pyx_L1_error)
 
-        /* "dnb.pyx":340
+        /* "dnb_int32.pyx":340
  *             for jj in range(ii, nchan):
  *                 chan_a[kk] = ii
  *                 chan_b[kk] = jj             # <<<<<<<<<<<<<<
@@ -4303,7 +4303,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
  */
         if (unlikely(PyObject_SetItem(__pyx_v_chan_b, __pyx_v_kk, __pyx_v_jj) < 0)) __PYX_ERR(0, 340, __pyx_L1_error)
 
-        /* "dnb.pyx":342
+        /* "dnb_int32.pyx":342
  *                 chan_b[kk] = jj
  * 
  *                 amp = Tsys * gain_chan[ii] * gain_chan[jj] * bandpass[ff]             # <<<<<<<<<<<<<<
@@ -4330,7 +4330,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
         __Pyx_XDECREF_SET(__pyx_v_amp, __pyx_t_7);
         __pyx_t_7 = 0;
 
-        /* "dnb.pyx":343
+        /* "dnb_int32.pyx":343
  * 
  *                 amp = Tsys * gain_chan[ii] * gain_chan[jj] * bandpass[ff]
  *                 if ii == jj:             # <<<<<<<<<<<<<<
@@ -4342,7 +4342,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         if (__pyx_t_14) {
 
-          /* "dnb.pyx":344
+          /* "dnb_int32.pyx":344
  *                 amp = Tsys * gain_chan[ii] * gain_chan[jj] * bandpass[ff]
  *                 if ii == jj:
  *                     vis[ff,kk].r = np.round(             # <<<<<<<<<<<<<<
@@ -4355,7 +4355,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
           __Pyx_GOTREF(__pyx_t_5);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-          /* "dnb.pyx":345
+          /* "dnb_int32.pyx":345
  *                 if ii == jj:
  *                     vis[ff,kk].r = np.round(
  *                         amp * (1. + random.randn(ntime) / math.sqrt(nsamples)))             # <<<<<<<<<<<<<<
@@ -4426,7 +4426,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-          /* "dnb.pyx":344
+          /* "dnb_int32.pyx":344
  *                 amp = Tsys * gain_chan[ii] * gain_chan[jj] * bandpass[ff]
  *                 if ii == jj:
  *                     vis[ff,kk].r = np.round(             # <<<<<<<<<<<<<<
@@ -4448,7 +4448,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
 
-          /* "dnb.pyx":346
+          /* "dnb_int32.pyx":346
  *                     vis[ff,kk].r = np.round(
  *                         amp * (1. + random.randn(ntime) / math.sqrt(nsamples)))
  *                     vis[ff,kk].i = 0.             # <<<<<<<<<<<<<<
@@ -4469,7 +4469,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
           if (__Pyx_PyObject_SetAttrStr(__pyx_t_7, __pyx_n_s_i, __pyx_float_0_) < 0) __PYX_ERR(0, 346, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-          /* "dnb.pyx":343
+          /* "dnb_int32.pyx":343
  * 
  *                 amp = Tsys * gain_chan[ii] * gain_chan[jj] * bandpass[ff]
  *                 if ii == jj:             # <<<<<<<<<<<<<<
@@ -4479,7 +4479,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
           goto __pyx_L9;
         }
 
-        /* "dnb.pyx":348
+        /* "dnb_int32.pyx":348
  *                     vis[ff,kk].i = 0.
  *                 else:
  *                     vis[ff,kk].r = np.round(             # <<<<<<<<<<<<<<
@@ -4493,7 +4493,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
           __Pyx_GOTREF(__pyx_t_5);
           __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
 
-          /* "dnb.pyx":349
+          /* "dnb_int32.pyx":349
  *                 else:
  *                     vis[ff,kk].r = np.round(
  *                         amp * random.randn(ntime) / math.sqrt(2 * nsamples))             # <<<<<<<<<<<<<<
@@ -4564,7 +4564,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-          /* "dnb.pyx":348
+          /* "dnb_int32.pyx":348
  *                     vis[ff,kk].i = 0.
  *                 else:
  *                     vis[ff,kk].r = np.round(             # <<<<<<<<<<<<<<
@@ -4586,7 +4586,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-          /* "dnb.pyx":350
+          /* "dnb_int32.pyx":350
  *                     vis[ff,kk].r = np.round(
  *                         amp * random.randn(ntime) / math.sqrt(2 * nsamples))
  *                     vis[ff,kk].i = np.round(             # <<<<<<<<<<<<<<
@@ -4599,7 +4599,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
           __Pyx_GOTREF(__pyx_t_5);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-          /* "dnb.pyx":351
+          /* "dnb_int32.pyx":351
  *                         amp * random.randn(ntime) / math.sqrt(2 * nsamples))
  *                     vis[ff,kk].i = np.round(
  *                         amp * random.randn(ntime) / math.sqrt(2 * nsamples))             # <<<<<<<<<<<<<<
@@ -4670,7 +4670,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
           __Pyx_GOTREF(__pyx_t_16);
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-          /* "dnb.pyx":350
+          /* "dnb_int32.pyx":350
  *                     vis[ff,kk].r = np.round(
  *                         amp * random.randn(ntime) / math.sqrt(2 * nsamples))
  *                     vis[ff,kk].i = np.round(             # <<<<<<<<<<<<<<
@@ -4694,7 +4694,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
         }
         __pyx_L9:;
 
-        /* "dnb.pyx":352
+        /* "dnb_int32.pyx":352
  *                     vis[ff,kk].i = np.round(
  *                         amp * random.randn(ntime) / math.sqrt(2 * nsamples))
  *                 kk += 1             # <<<<<<<<<<<<<<
@@ -4706,7 +4706,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
         __Pyx_DECREF_SET(__pyx_v_kk, __pyx_t_4);
         __pyx_t_4 = 0;
 
-        /* "dnb.pyx":338
+        /* "dnb_int32.pyx":338
  *         kk = 0
  *         for ii in range(nchan):
  *             for jj in range(ii, nchan):             # <<<<<<<<<<<<<<
@@ -4716,7 +4716,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
       }
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "dnb.pyx":337
+      /* "dnb_int32.pyx":337
  *     for ff in range(nfreq):
  *         kk = 0
  *         for ii in range(nchan):             # <<<<<<<<<<<<<<
@@ -4726,7 +4726,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
     }
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "dnb.pyx":335
+    /* "dnb_int32.pyx":335
  *     chan_b = np.empty(nprod, np.int64)
  * 
  *     for ff in range(nfreq):             # <<<<<<<<<<<<<<
@@ -4736,7 +4736,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "dnb.pyx":354
+  /* "dnb_int32.pyx":354
  *                 kk += 1
  * 
  *     t0 = time.perf_counter()             # <<<<<<<<<<<<<<
@@ -4763,7 +4763,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __pyx_v_t0 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "dnb.pyx":355
+  /* "dnb_int32.pyx":355
  * 
  *     t0 = time.perf_counter()
  *     vis_rounded = reduce_precision(vis, nchan, chan_a, chan_b, f / nsamples)             # <<<<<<<<<<<<<<
@@ -4836,7 +4836,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __pyx_v_vis_rounded = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "dnb.pyx":356
+  /* "dnb_int32.pyx":356
  *     t0 = time.perf_counter()
  *     vis_rounded = reduce_precision(vis, nchan, chan_a, chan_b, f / nsamples)
  *     t = time.perf_counter() - t0             # <<<<<<<<<<<<<<
@@ -4866,7 +4866,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __pyx_v_t = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "dnb.pyx":358
+  /* "dnb_int32.pyx":358
  *     t = time.perf_counter() - t0
  * 
  *     rate = nprod * nfreq * ntime * VIS_DTYPE.itemsize / t             # <<<<<<<<<<<<<<
@@ -4893,7 +4893,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __pyx_v_rate = __pyx_t_16;
   __pyx_t_16 = 0;
 
-  /* "dnb.pyx":359
+  /* "dnb_int32.pyx":359
  * 
  *     rate = nprod * nfreq * ntime * VIS_DTYPE.itemsize / t
  *     print "Throughput: %f MiB/s" % (rate / 1024**2)             # <<<<<<<<<<<<<<
@@ -4908,7 +4908,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 359, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "dnb.pyx":361
+  /* "dnb_int32.pyx":361
  *     print "Throughput: %f MiB/s" % (rate / 1024**2)
  * 
  *     rounding_error = (vis_rounded.r - vis.r).astype(np.int64)             # <<<<<<<<<<<<<<
@@ -4950,7 +4950,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __pyx_v_rounding_error = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "dnb.pyx":362
+  /* "dnb_int32.pyx":362
  * 
  *     rounding_error = (vis_rounded.r - vis.r).astype(np.int64)
  *     if l:             # <<<<<<<<<<<<<<
@@ -4960,7 +4960,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_v_l); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 362, __pyx_L1_error)
   if (__pyx_t_14) {
 
-    /* "dnb.pyx":363
+    /* "dnb_int32.pyx":363
  *     rounding_error = (vis_rounded.r - vis.r).astype(np.int64)
  *     if l:
  *         print "Rounding bias:"             # <<<<<<<<<<<<<<
@@ -4969,7 +4969,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
  */
     if (__Pyx_PrintOne(0, __pyx_kp_s_Rounding_bias) < 0) __PYX_ERR(0, 363, __pyx_L1_error)
 
-    /* "dnb.pyx":364
+    /* "dnb_int32.pyx":364
  *     if l:
  *         print "Rounding bias:"
  *         print np.mean(rounding_error, -1)             # <<<<<<<<<<<<<<
@@ -5029,7 +5029,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
     if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 364, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "dnb.pyx":365
+    /* "dnb_int32.pyx":365
  *         print "Rounding bias:"
  *         print np.mean(rounding_error, -1)
  *         print "Rounding RMS:"             # <<<<<<<<<<<<<<
@@ -5038,7 +5038,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
  */
     if (__Pyx_PrintOne(0, __pyx_kp_s_Rounding_RMS) < 0) __PYX_ERR(0, 365, __pyx_L1_error)
 
-    /* "dnb.pyx":366
+    /* "dnb_int32.pyx":366
  *         print np.mean(rounding_error, -1)
  *         print "Rounding RMS:"
  *         print np.sqrt(np.mean(rounding_error**2, -1))             # <<<<<<<<<<<<<<
@@ -5123,7 +5123,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
     if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 366, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "dnb.pyx":367
+    /* "dnb_int32.pyx":367
  *         print "Rounding RMS:"
  *         print np.sqrt(np.mean(rounding_error**2, -1))
  *         print "Relative to thermal noise:"             # <<<<<<<<<<<<<<
@@ -5132,7 +5132,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
  */
     if (__Pyx_PrintOne(0, __pyx_kp_s_Relative_to_thermal_noise) < 0) __PYX_ERR(0, 367, __pyx_L1_error)
 
-    /* "dnb.pyx":368
+    /* "dnb_int32.pyx":368
  *         print np.sqrt(np.mean(rounding_error**2, -1))
  *         print "Relative to thermal noise:"
  *         print np.mean(rounding_error**2, -1) / np.var(vis.r, -1)             # <<<<<<<<<<<<<<
@@ -5254,7 +5254,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
     if (__Pyx_PrintOne(0, __pyx_t_4) < 0) __PYX_ERR(0, 368, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "dnb.pyx":362
+    /* "dnb_int32.pyx":362
  * 
  *     rounding_error = (vis_rounded.r - vis.r).astype(np.int64)
  *     if l:             # <<<<<<<<<<<<<<
@@ -5263,7 +5263,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
  */
   }
 
-  /* "dnb.pyx":309
+  /* "dnb_int32.pyx":309
  * 
  * 
  * def test(*, l=False):             # <<<<<<<<<<<<<<
@@ -5285,7 +5285,7 @@ static PyObject *__pyx_pf_3dnb_4test(CYTHON_UNUSED PyObject *__pyx_self, PyObjec
   __Pyx_XDECREF(__pyx_t_16);
   __Pyx_XDECREF(__pyx_t_17);
   __Pyx_XDECREF(__pyx_t_18);
-  __Pyx_AddTraceback("dnb.test", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("dnb_int32.test", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_random);
@@ -6340,17 +6340,17 @@ static PyMethodDef __pyx_methods[] = {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_dnb(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_dnb_int32(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_dnb},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_dnb_int32},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "dnb",
+    "dnb_int32",
     __pyx_k_Visibility_data_precision_reduct, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -6406,8 +6406,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_chan_a, __pyx_k_chan_a, sizeof(__pyx_k_chan_a), 0, 0, 1, 1},
   {&__pyx_n_s_chan_b, __pyx_k_chan_b, sizeof(__pyx_k_chan_b), 0, 0, 1, 1},
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
-  {&__pyx_n_s_dnb, __pyx_k_dnb, sizeof(__pyx_k_dnb), 0, 0, 1, 1},
-  {&__pyx_kp_s_dnb_pyx, __pyx_k_dnb_pyx, sizeof(__pyx_k_dnb_pyx), 0, 0, 1, 0},
+  {&__pyx_n_s_dnb_int32, __pyx_k_dnb_int32, sizeof(__pyx_k_dnb_int32), 0, 0, 1, 1},
+  {&__pyx_kp_s_dnb_int32_pyx, __pyx_k_dnb_int32_pyx, sizeof(__pyx_k_dnb_int32_pyx), 0, 0, 1, 0},
   {&__pyx_n_s_empty, __pyx_k_empty, sizeof(__pyx_k_empty), 0, 0, 1, 1},
   {&__pyx_n_s_empty_like, __pyx_k_empty_like, sizeof(__pyx_k_empty_like), 0, 0, 1, 1},
   {&__pyx_n_s_end, __pyx_k_end, sizeof(__pyx_k_end), 0, 0, 1, 1},
@@ -6491,7 +6491,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "dnb.pyx":141
+  /* "dnb_int32.pyx":141
  *     cdef np.ndarray[np.int64_t, ndim=1, mode='c'] auto_inds
  *     auto_inds = np.empty(nchan, np.int64)
  *     auto_inds[:] = -1             # <<<<<<<<<<<<<<
@@ -6502,7 +6502,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice_);
   __Pyx_GIVEREF(__pyx_slice_);
 
-  /* "dnb.pyx":228
+  /* "dnb_int32.pyx":228
  * 
  *     if (gran_max > 1073741824):
  *         raise ValueError('Sorry, maximum of granularity is too large.')             # <<<<<<<<<<<<<<
@@ -6535,7 +6535,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "dnb.pyx":72
+  /* "dnb_int32.pyx":72
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * def reduce_precision(             # <<<<<<<<<<<<<<
@@ -6545,9 +6545,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__5 = PyTuple_Pack(23, __pyx_n_s_vis, __pyx_n_s_nchan, __pyx_n_s_chan_a, __pyx_n_s_chan_b, __pyx_n_s_f_nsamp, __pyx_n_s_nprod, __pyx_n_s_msg, __pyx_n_s_ntime, __pyx_n_s_ii, __pyx_n_s_jj, __pyx_n_s_kk, __pyx_n_s_auto_a, __pyx_n_s_auto_b, __pyx_n_s_gran_max, __pyx_n_s_gran_max_sq, __pyx_n_s_gran_sq_factor, __pyx_n_s_half_gran_sq_factor, __pyx_n_s_auto_inds, __pyx_n_s_auto_vis, __pyx_n_s_vis_r, __pyx_n_s_n_a, __pyx_n_s_n_b, __pyx_n_s_is_auto); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
-  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(5, 0, 23, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_dnb_pyx, __pyx_n_s_reduce_precision, 72, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(5, 0, 23, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_dnb_int32_pyx, __pyx_n_s_reduce_precision, 72, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 72, __pyx_L1_error)
 
-  /* "dnb.pyx":304
+  /* "dnb_int32.pyx":304
  * 
  * 
  * def bit_round_py(np.int32_t val, np.int32_t gran_max):             # <<<<<<<<<<<<<<
@@ -6557,9 +6557,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__7 = PyTuple_Pack(2, __pyx_n_s_val, __pyx_n_s_gran_max); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
-  __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_dnb_pyx, __pyx_n_s_bit_round_py, 304, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_dnb_int32_pyx, __pyx_n_s_bit_round_py, 304, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) __PYX_ERR(0, 304, __pyx_L1_error)
 
-  /* "dnb.pyx":309
+  /* "dnb_int32.pyx":309
  * 
  * 
  * def test(*, l=False):             # <<<<<<<<<<<<<<
@@ -6569,7 +6569,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__9 = PyTuple_Pack(25, __pyx_n_s_l, __pyx_n_s_random, __pyx_n_s_time, __pyx_n_s_nchan, __pyx_n_s_nsamples, __pyx_n_s_Tsys, __pyx_n_s_f, __pyx_n_s_nfreq, __pyx_n_s_ntime, __pyx_n_s_gain_chan, __pyx_n_s_bandpass, __pyx_n_s_nprod, __pyx_n_s_vis, __pyx_n_s_chan_a, __pyx_n_s_chan_b, __pyx_n_s_ff, __pyx_n_s_kk, __pyx_n_s_ii, __pyx_n_s_jj, __pyx_n_s_amp, __pyx_n_s_t0, __pyx_n_s_vis_rounded, __pyx_n_s_t, __pyx_n_s_rate, __pyx_n_s_rounding_error); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 309, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
-  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(0, 1, 25, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_dnb_pyx, __pyx_n_s_test, 309, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 309, __pyx_L1_error)
+  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(0, 1, 25, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_dnb_int32_pyx, __pyx_n_s_test, 309, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 309, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -6731,11 +6731,11 @@ static int __Pyx_modinit_function_import_code(void) {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initdnb(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initdnb(void)
+__Pyx_PyMODINIT_FUNC initdnb_int32(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initdnb_int32(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_dnb(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_dnb(void)
+__Pyx_PyMODINIT_FUNC PyInit_dnb_int32(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_dnb_int32(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -6802,7 +6802,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_dnb(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_dnb_int32(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -6818,7 +6818,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_dnb(PyObject *__pyx_pyinit_module)
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'dnb' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'dnb_int32' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -6833,7 +6833,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_dnb(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_dnb_int32(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -6872,7 +6872,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("dnb", __pyx_methods, __pyx_k_Visibility_data_precision_reduct, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("dnb_int32", __pyx_methods, __pyx_k_Visibility_data_precision_reduct, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -6890,14 +6890,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_dnb) {
+  if (__pyx_module_is_main_dnb_int32) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "dnb")) {
-      if (unlikely(PyDict_SetItemString(modules, "dnb", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "dnb_int32")) {
+      if (unlikely(PyDict_SetItemString(modules, "dnb_int32", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -6918,7 +6918,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "dnb.pyx":51
+  /* "dnb_int32.pyx":51
  * """
  * 
  * import math             # <<<<<<<<<<<<<<
@@ -6930,7 +6930,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_math, __pyx_t_1) < 0) __PYX_ERR(0, 51, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "dnb.pyx":53
+  /* "dnb_int32.pyx":53
  * import math
  * 
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -6942,7 +6942,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 53, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "dnb.pyx":59
+  /* "dnb_int32.pyx":59
  * from libc.math cimport sqrt
  * 
  * np.import_array()             # <<<<<<<<<<<<<<
@@ -6951,7 +6951,7 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_t_2 = __pyx_f_5numpy_import_array(); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 59, __pyx_L1_error)
 
-  /* "dnb.pyx":67
+  /* "dnb_int32.pyx":67
  * 
  * 
  * VIS_DTYPE = np.dtype([('r', np.int32), ('i', np.int32)])             # <<<<<<<<<<<<<<
@@ -6998,43 +6998,43 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_VIS_DTYPE, __pyx_t_3) < 0) __PYX_ERR(0, 67, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "dnb.pyx":72
+  /* "dnb_int32.pyx":72
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * def reduce_precision(             # <<<<<<<<<<<<<<
  *         np.ndarray[VIS_DTYPE_t, ndim=3, mode='c'] vis not None,
  *         int nchan,
  */
-  __pyx_t_3 = PyCFunction_NewEx(&__pyx_mdef_3dnb_1reduce_precision, NULL, __pyx_n_s_dnb); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_t_3 = PyCFunction_NewEx(&__pyx_mdef_9dnb_int32_1reduce_precision, NULL, __pyx_n_s_dnb_int32); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_reduce_precision, __pyx_t_3) < 0) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "dnb.pyx":304
+  /* "dnb_int32.pyx":304
  * 
  * 
  * def bit_round_py(np.int32_t val, np.int32_t gran_max):             # <<<<<<<<<<<<<<
  *     """Python wrapper of C version, for testing."""
  *     return bit_round(val, gran_max)
  */
-  __pyx_t_3 = PyCFunction_NewEx(&__pyx_mdef_3dnb_3bit_round_py, NULL, __pyx_n_s_dnb); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __pyx_t_3 = PyCFunction_NewEx(&__pyx_mdef_9dnb_int32_3bit_round_py, NULL, __pyx_n_s_dnb_int32); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_bit_round_py, __pyx_t_3) < 0) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "dnb.pyx":309
+  /* "dnb_int32.pyx":309
  * 
  * 
  * def test(*, l=False):             # <<<<<<<<<<<<<<
  *     """Generate mock data then reduce its precision."""
  * 
  */
-  __pyx_t_3 = PyCFunction_NewEx(&__pyx_mdef_3dnb_5test, NULL, __pyx_n_s_dnb); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 309, __pyx_L1_error)
+  __pyx_t_3 = PyCFunction_NewEx(&__pyx_mdef_9dnb_int32_5test, NULL, __pyx_n_s_dnb_int32); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 309, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_3) < 0) __PYX_ERR(0, 309, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "dnb.pyx":371
+  /* "dnb_int32.pyx":371
  * 
  * 
  * if __name__ == "__main__":             # <<<<<<<<<<<<<<
@@ -7046,7 +7046,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_5) {
 
-    /* "dnb.pyx":372
+    /* "dnb_int32.pyx":372
  * 
  * if __name__ == "__main__":
  *     test()             # <<<<<<<<<<<<<<
@@ -7058,7 +7058,7 @@ if (!__Pyx_RefNanny) {
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "dnb.pyx":371
+    /* "dnb_int32.pyx":371
  * 
  * 
  * if __name__ == "__main__":             # <<<<<<<<<<<<<<
@@ -7066,7 +7066,7 @@ if (!__Pyx_RefNanny) {
  */
   }
 
-  /* "dnb.pyx":1
+  /* "dnb_int32.pyx":1
  * """Visibility data precision reduction.             # <<<<<<<<<<<<<<
  * 
  * Author: Kiyoshi Masui <kiyo@physics.ubc.ca>
@@ -7093,11 +7093,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_4);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init dnb", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init dnb_int32", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init dnb");
+    PyErr_SetString(PyExc_ImportError, "init dnb_int32");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
