@@ -150,7 +150,7 @@ cdef inline np.float32_t bit_round(np.float32_t val, np.float32_t g_max):
     cdef np.int32_t exponent_g_max = p_g_max[0] & 0x7f800000
 
     cdef np.int32_t delta_exponent = (exponent_val - exponent_g_max) >> 23
-    cdef np.int32_t val_t = p_val[0] & (0xffffffff << (23 - delta_exponent))
+    cdef np.int32_t val_t = p_val[0] & (-1 << (23 - delta_exponent))
 
     cdef np.float32_t *p_val_t = <np.float32_t*> &val_t
 
