@@ -191,11 +191,11 @@ def test():
             for j in range(i+1):
                 A = T*gain_chan[i]*gain_chan[j]*band_pass[k0]
                 if (i==j):
-                    vis_r = np.round(A*(1+randn(ntime))/np.sqrt(N))
+                    vis_r = A*(1+randn(ntime))/np.sqrt(N)
                     vis_i = 0
                 else:
-                    vis_r = np.round(A*randn(ntime)/np.sqrt(2*N))
-                    vis_i = np.round(A*randn(ntime)/np.sqrt(2*N))
+                    vis_r = A*randn(ntime)/np.sqrt(2*N)
+                    vis_i = A*randn(ntime)/np.sqrt(2*N)
                 vis[k0,k1] = vis_r+vis_i*1j
                 k1 += 1
 
