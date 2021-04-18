@@ -33,6 +33,7 @@ import numpy as np
 cimport numpy as np
 cimport cython
 from libc.math cimport sqrt
+from libc.stdio cimport printf
 
 np.import_array()
 
@@ -135,9 +136,25 @@ def reduce_precision(
 
     return vis_r, vis_i
 
+def bit_round_py(np.float32_t val, np.float32_t g_max):
+    """Python wrapper of C version, for testing."""
+    return bit_round(val, g_max)
+
 cdef inline np.float32_t bit_round(np.float32_t val, np.float32_t g_max):
     """Round val to n*2**b (int n; int b = max(b: 2**b < g_max))."""
-    return val
+
+    cdef np.int32_t *p_val = <np.int32_t*> &val
+    cdef np.int32_t *p_g_max = <np.int32_t*> &g_max
+
+    cdef np.int32_t exponent_val = p_val[0] & 0x7f800000
+    cdef np.int32_t exponent_g_max = p_g_max[0] & 0x7f800000
+
+    cdef np.int32_t delta_exponent = (exponent_val - exponent_g_max) >> 23
+    cdef np.int32_t val_t = p_val[0] & (0xffffffff << (23 - delta_exponent))
+
+    cdef np.float32_t *p_val_t = <np.float32_t*> &val_t
+
+    return p_val_t[0]
 
 def test():
     """Test reduce_precision."""
