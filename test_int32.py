@@ -62,7 +62,7 @@ def test(*, l=False):
     print("Throughput(reduce_precision): %f MiB/s" %(rate/1024**2))
 
     # Compress.
-    with h5py.File('test.h5', 'w') as f:
+    with h5py.File('test_int32.h5', 'w') as f:
         t0 = perf_counter()
         f.create_dataset('mock_data',
             data=vis_rounded, **hdf5plugin.Bitshuffle())
@@ -72,7 +72,7 @@ def test(*, l=False):
     print("Throughput(bitshuffle_compress): %f MiB/s" %(rate/1024**2))
 
     # Decompress.
-    with h5py.File('test.h5', 'r') as f:
+    with h5py.File('test_int32.h5', 'r') as f:
         t0 = perf_counter()
         vis_decompressed = f['mock_data'][...]
         t = perf_counter()-t0
@@ -85,7 +85,7 @@ def test(*, l=False):
 
     # Calculate compression rate.
     import os
-    rate = os.path.getsize('test.h5')/(nfreq*nprod*ntime*DTYPE.itemsize)
+    rate = os.path.getsize('test_int32.h5')/(nfreq*nprod*ntime*DTYPE.itemsize)
     print('Compression rate: %f %%' %(100*rate))
 
     rounding_error = (vis_rounded.r-vis.r).astype(numpy.int64)
