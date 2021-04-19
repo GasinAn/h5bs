@@ -20,9 +20,9 @@ float float32_bit_round(float val, float g_max){
     int val_r;
     float *p_val_r;
 
-    if (delta_exponent < 0)
+    if (delta_exponent >> 31) // delta_exponent < 0
     {
-        if (delta_exponent < -1)
+        if (delta_exponent ^ -1) // delta_exponent != -1
         {
             return 0.0;
         }
@@ -30,7 +30,7 @@ float float32_bit_round(float val, float g_max){
         {
             g = *p_g_max & -8388608; // -8388608: ff800000
             p_g = (float*) &g;
-            if (*p_val < 0)
+            if (*p_val >> 31) // *p_val < 0
             {
                 return -*p_g;
             }
@@ -45,7 +45,7 @@ float float32_bit_round(float val, float g_max){
         g = *p_g_max & -8388608; // -8388608: ff800000
         p_g = (float*) &g;
 
-        if (*p_val < 0)
+        if (*p_val >> 31) // *p_val < 0
         {
             val_ = val + (*p_g / 2.0);
         }

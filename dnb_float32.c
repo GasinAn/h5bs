@@ -3171,26 +3171,26 @@ static CYTHON_INLINE __pyx_t_5numpy_float32_t __pyx_f_11dnb_float32_bit_round(__
   /* "dnb_float32.pyx":165
  *     cdef np.float32_t *p_val_r
  * 
- *     if delta_exponent < 0:             # <<<<<<<<<<<<<<
+ *     if delta_exponent >> 31: # delta_exponent < 0             # <<<<<<<<<<<<<<
  * 
- *         if delta_exponent < -1:
+ *         if delta_exponent ^ -1: # delta_exponent != -1
  */
-  __pyx_t_1 = ((__pyx_v_delta_exponent < 0) != 0);
+  __pyx_t_1 = ((__pyx_v_delta_exponent >> 31) != 0);
   if (__pyx_t_1) {
 
     /* "dnb_float32.pyx":167
- *     if delta_exponent < 0:
+ *     if delta_exponent >> 31: # delta_exponent < 0
  * 
- *         if delta_exponent < -1:             # <<<<<<<<<<<<<<
+ *         if delta_exponent ^ -1: # delta_exponent != -1             # <<<<<<<<<<<<<<
  *             return 0.0
  * 
  */
-    __pyx_t_1 = ((__pyx_v_delta_exponent < -1L) != 0);
+    __pyx_t_1 = ((__pyx_v_delta_exponent ^ -1L) != 0);
     if (__pyx_t_1) {
 
       /* "dnb_float32.pyx":168
  * 
- *         if delta_exponent < -1:
+ *         if delta_exponent ^ -1: # delta_exponent != -1
  *             return 0.0             # <<<<<<<<<<<<<<
  * 
  *         else:
@@ -3199,9 +3199,9 @@ static CYTHON_INLINE __pyx_t_5numpy_float32_t __pyx_f_11dnb_float32_bit_round(__
       goto __pyx_L0;
 
       /* "dnb_float32.pyx":167
- *     if delta_exponent < 0:
+ *     if delta_exponent >> 31: # delta_exponent < 0
  * 
- *         if delta_exponent < -1:             # <<<<<<<<<<<<<<
+ *         if delta_exponent ^ -1: # delta_exponent != -1             # <<<<<<<<<<<<<<
  *             return 0.0
  * 
  */
@@ -3222,23 +3222,23 @@ static CYTHON_INLINE __pyx_t_5numpy_float32_t __pyx_f_11dnb_float32_bit_round(__
  *             g = p_g_max[0] & -8388608 # -8388608: ff800000
  *             p_g = <np.float32_t*> &g             # <<<<<<<<<<<<<<
  * 
- *             if p_val[0] < 0:
+ *             if p_val[0] >> 31: # p_val[0] < 0
  */
       __pyx_v_p_g = ((__pyx_t_5numpy_float32_t *)(&__pyx_v_g));
 
       /* "dnb_float32.pyx":174
  *             p_g = <np.float32_t*> &g
  * 
- *             if p_val[0] < 0:             # <<<<<<<<<<<<<<
+ *             if p_val[0] >> 31: # p_val[0] < 0             # <<<<<<<<<<<<<<
  *                 return -p_g[0]
  *             else:
  */
-      __pyx_t_1 = (((__pyx_v_p_val[0]) < 0) != 0);
+      __pyx_t_1 = (((__pyx_v_p_val[0]) >> 31) != 0);
       if (__pyx_t_1) {
 
         /* "dnb_float32.pyx":175
  * 
- *             if p_val[0] < 0:
+ *             if p_val[0] >> 31: # p_val[0] < 0
  *                 return -p_g[0]             # <<<<<<<<<<<<<<
  *             else:
  *                 return p_g[0]
@@ -3249,7 +3249,7 @@ static CYTHON_INLINE __pyx_t_5numpy_float32_t __pyx_f_11dnb_float32_bit_round(__
         /* "dnb_float32.pyx":174
  *             p_g = <np.float32_t*> &g
  * 
- *             if p_val[0] < 0:             # <<<<<<<<<<<<<<
+ *             if p_val[0] >> 31: # p_val[0] < 0             # <<<<<<<<<<<<<<
  *                 return -p_g[0]
  *             else:
  */
@@ -3271,9 +3271,9 @@ static CYTHON_INLINE __pyx_t_5numpy_float32_t __pyx_f_11dnb_float32_bit_round(__
     /* "dnb_float32.pyx":165
  *     cdef np.float32_t *p_val_r
  * 
- *     if delta_exponent < 0:             # <<<<<<<<<<<<<<
+ *     if delta_exponent >> 31: # delta_exponent < 0             # <<<<<<<<<<<<<<
  * 
- *         if delta_exponent < -1:
+ *         if delta_exponent ^ -1: # delta_exponent != -1
  */
   }
 
@@ -3301,23 +3301,23 @@ static CYTHON_INLINE __pyx_t_5numpy_float32_t __pyx_f_11dnb_float32_bit_round(__
  *         g = p_g_max[0] & -8388608 # -8388608: ff800000
  *         p_g = <np.float32_t*> &g             # <<<<<<<<<<<<<<
  * 
- *         if p_val[0] < 0:
+ *         if p_val[0] >> 31: # p_val[0] < 0
  */
     __pyx_v_p_g = ((__pyx_t_5numpy_float32_t *)(&__pyx_v_g));
 
     /* "dnb_float32.pyx":183
  *         p_g = <np.float32_t*> &g
  * 
- *         if p_val[0] < 0:             # <<<<<<<<<<<<<<
+ *         if p_val[0] >> 31: # p_val[0] < 0             # <<<<<<<<<<<<<<
  *             val_ = val - (p_g[0] / 2.0)
  *         else:
  */
-    __pyx_t_1 = (((__pyx_v_p_val[0]) < 0) != 0);
+    __pyx_t_1 = (((__pyx_v_p_val[0]) >> 31) != 0);
     if (__pyx_t_1) {
 
       /* "dnb_float32.pyx":184
  * 
- *         if p_val[0] < 0:
+ *         if p_val[0] >> 31: # p_val[0] < 0
  *             val_ = val - (p_g[0] / 2.0)             # <<<<<<<<<<<<<<
  *         else:
  *             val_ = val + (p_g[0] / 2.0)
@@ -3327,7 +3327,7 @@ static CYTHON_INLINE __pyx_t_5numpy_float32_t __pyx_f_11dnb_float32_bit_round(__
       /* "dnb_float32.pyx":183
  *         p_g = <np.float32_t*> &g
  * 
- *         if p_val[0] < 0:             # <<<<<<<<<<<<<<
+ *         if p_val[0] >> 31: # p_val[0] < 0             # <<<<<<<<<<<<<<
  *             val_ = val - (p_g[0] / 2.0)
  *         else:
  */
