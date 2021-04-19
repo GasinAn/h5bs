@@ -312,7 +312,7 @@ def bit_round_py(np.int32_t val, np.int32_t gran_max):
 def test(*, l=False):
     """Generate mock data then reduce its precision."""
 
-    from numpy import random
+    from numpy.random import randn
     import time
 
     # Parameters.
@@ -345,13 +345,13 @@ def test(*, l=False):
                 amp = Tsys * gain_chan[ii] * gain_chan[jj] * bandpass[ff]
                 if ii == jj:
                     vis[ff,kk].r = np.round(
-                        amp * (1. + random.randn(ntime) / math.sqrt(nsamples)))
+                        amp * abs(1. + randn(ntime) / math.sqrt(nsamples)))
                     vis[ff,kk].i = 0.
                 else:
                     vis[ff,kk].r = np.round(
-                        amp * random.randn(ntime) / math.sqrt(2 * nsamples))
+                        amp * randn(ntime) / math.sqrt(2 * nsamples))
                     vis[ff,kk].i = np.round(
-                        amp * random.randn(ntime) / math.sqrt(2 * nsamples))
+                        amp * randn(ntime) / math.sqrt(2 * nsamples))
                 kk += 1
 
     t0 = time.perf_counter()

@@ -44,7 +44,7 @@ def test(*, l=False):
                 amp = Tsys*gain_chan[ii]*gain_chan[jj]*bandpass[ff]
                 if (ii == jj):
                     vis[ff,kk].r = numpy.round(
-                        amp*(1.0+numpy.random.randn(ntime)/sqrt(nsamples)))
+                        amp*abs(1.0+numpy.random.randn(ntime)/sqrt(nsamples)))
                     vis[ff,kk].i = 0.0
                 else:
                     vis[ff,kk].r = numpy.round(
