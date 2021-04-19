@@ -28,16 +28,10 @@ float float32_bit_round(float val, float g_max){
         }
         else
         {
-            g = *p_g_max & -8388608; // -8388608: ff800000
+            g = *p_g_max & 0x7f800000;
+            g = (*p_val & -2147483648) | g; // -2147483648: 80000000
             p_g = (float*) &g;
-            if (*p_val >> 31) // *p_val < 0
-            {
-                return -*p_g;
-            }
-            else
-            {
-                return *p_g;
-            }
+            return *p_g;
         }
     }
     else if (delta_exponent < 23)

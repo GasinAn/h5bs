@@ -168,13 +168,10 @@ cdef inline np.float32_t bit_round(np.float32_t val, np.float32_t g_max):
             return 0.0
 
         else:
-            g = p_g_max[0] & -8388608 # -8388608: ff800000
+            g = p_g_max[0] & 0x7f800000
+            g = (p_val[0] & -2147483648) | g # -2147483648: 80000000
             p_g = <np.float32_t*> &g
-
-            if p_val[0] >> 31: # p_val[0] < 0
-                return -p_g[0]
-            else:
-                return p_g[0]
+            return p_g[0]
 
     elif delta_exponent < 23:
         g = p_g_max[0] & -8388608 # -8388608: ff800000
