@@ -22,17 +22,11 @@ float float32_bit_round(float val, float g_max){
 
     if (delta_exponent >> 31) // delta_exponent < 0
     {
-        if (delta_exponent ^ -1) // delta_exponent != -1
-        {
-            return 0.0;
-        }
-        else
-        {
-            g = *p_g_max & 0x7f800000;
-            g = (*p_val & -2147483648) | g; // -2147483648: 80000000
-            p_g = (float*) &g;
-            return *p_g;
-        }
+        g = *p_g_max & 0x7f800000;
+        g = (*p_val & -2147483648) | g; // -2147483648: 80000000
+        g = (delta_exponent == -1) * g;
+        p_g = (float*) &g;
+        return *p_g;
     }
     else if (delta_exponent < 23)
     {
