@@ -163,21 +163,29 @@ cdef inline np.float32_t bit_round(np.float32_t val, np.float32_t g_max):
     cdef np.float32_t *p_val_r
 
     if delta_exponent < 0:
-        return 0.0
 
-    elif delta_exponent > 31:
-        return val
+        if delta_exponent < -1:
+            return 0.0
 
-    else:
-        g = p_g_max[0] & -8388608 # -8388608: 0xff800000
+        else:
+            g = p_g_max[0] & -8388608 # -8388608: ff800000
+            p_g = <np.float32_t*> &g
+            return p_g[0] * (1 - 2 * (p_val[0] < 0))
+
+    elif delta_exponent < 32:
+
+        g = p_g_max[0] & -8388608 # -8388608: ff800000
         p_g = <np.float32_t*> &g
 
         val_ = val + (p_g[0] / 2.0)
         p_val_ = <np.int32_t*> &val_
 
-        val_r = p_val_[0] & (-8388608 >> delta_exponent)
+        val_r = p_val_[0] & (-8388608 >> delta_exponent) # -8388608: ff800000
         p_val_r = <np.float32_t*> &val_r
         return p_val_r[0]
+
+    else:
+        return val
 
 def test():
     """Test reduce_precision."""
