@@ -40,7 +40,7 @@ def test():
             for j in range(i+1):
                 A = T*gain_chan[i]*gain_chan[j]*band_pass[k0]
                 if (i==j):
-                    vis_r = A*(1+randn(ntime))/numpy.sqrt(N)
+                    vis_r = A*abs(1+randn(ntime))/numpy.sqrt(N)
                     vis_i = 0
                 else:
                     vis_r = A*randn(ntime)/numpy.sqrt(2*N)

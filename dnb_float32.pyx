@@ -126,11 +126,13 @@ def reduce_precision(
 
                 if is_auto:
                     g_max = <np.float32_t> sqrt(auto_a*auto_b*auto_g_factor)
+
                     vis_r[n0,n1,n2] = bit_round(vis[n0,n1,n2].real, g_max)
                     vis_i[n0,n1,n2] = 0
 
                 else:
                     g_max = <np.float32_t> sqrt(auto_a*auto_b*corr_g_factor)
+
                     vis_r[n0,n1,n2] = bit_round(vis[n0,n1,n2].real, g_max)
                     vis_i[n0,n1,n2] = bit_round(vis[n0,n1,n2].imag, g_max)
 
@@ -141,7 +143,7 @@ def bit_round_py(np.float32_t val, np.float32_t g_max):
     return bit_round(val, g_max)
 
 cdef inline np.float32_t bit_round(np.float32_t val, np.float32_t g_max):
-    """Round val to n*2**b (int n; int b = max(b: 2**b < g_max))."""
+    """Round val to n*2**b (int n; int b = max(b: 2**b <= g_max))."""
 
     cdef np.int32_t *p_val = <np.int32_t*> &val
     cdef np.int32_t *p_g_max = <np.int32_t*> &g_max
@@ -191,7 +193,7 @@ def test():
             for j in range(i+1):
                 A = T*gain_chan[i]*gain_chan[j]*band_pass[k0]
                 if (i==j):
-                    vis_r = A*(1+randn(ntime))/np.sqrt(N)
+                    vis_r = A*abs(1+randn(ntime))/np.sqrt(N)
                     vis_i = 0
                 else:
                     vis_r = A*randn(ntime)/np.sqrt(2*N)
