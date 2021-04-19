@@ -7,6 +7,7 @@ float float32_bit_round(float val, float g_max){
     int *p_val = (int*) &val;
     int *p_g_max = (int*) &g_max;
 
+    // by the way, what happens if p_val/p_g_max is negative? notice the sign bit (not sure whether this works well)
     int exponent_val = *p_val & 0x7f800000;
     int exponent_g_max = *p_g_max & 0x7f800000;
 
@@ -53,6 +54,7 @@ float float32_bit_round(float val, float g_max){
 
         // may be write as 0xff800000u
         val_r = *p_val_ & (-8388608 >> delta_exponent); // -8388608: ff800000
+        // same as above
         p_val_r = (float*) &val_r;
         return *p_val_r;
     }
