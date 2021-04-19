@@ -3270,22 +3270,22 @@ static CYTHON_INLINE __pyx_t_5numpy_float32_t __pyx_f_11dnb_float32_bit_round(__
  *         g = p_g_max[0] & -8388608 # -8388608: ff800000
  *         p_g = <np.float32_t*> &g             # <<<<<<<<<<<<<<
  * 
- *         val_ = val + (p_g[0] / 2.0)
+ *         val_ = val + (p_g[0] / 2.0) * (1 - 2 * (p_val[0] < 0))
  */
     __pyx_v_p_g = ((__pyx_t_5numpy_float32_t *)(&__pyx_v_g));
 
     /* "dnb_float32.pyx":180
  *         p_g = <np.float32_t*> &g
  * 
- *         val_ = val + (p_g[0] / 2.0)             # <<<<<<<<<<<<<<
+ *         val_ = val + (p_g[0] / 2.0) * (1 - 2 * (p_val[0] < 0))             # <<<<<<<<<<<<<<
  *         p_val_ = <np.int32_t*> &val_
  * 
  */
-    __pyx_v_val_ = (__pyx_v_val + ((__pyx_v_p_g[0]) / 2.0));
+    __pyx_v_val_ = (__pyx_v_val + (((__pyx_v_p_g[0]) / 2.0) * (1 - (2 * ((__pyx_v_p_val[0]) < 0)))));
 
     /* "dnb_float32.pyx":181
  * 
- *         val_ = val + (p_g[0] / 2.0)
+ *         val_ = val + (p_g[0] / 2.0) * (1 - 2 * (p_val[0] < 0))
  *         p_val_ = <np.int32_t*> &val_             # <<<<<<<<<<<<<<
  * 
  *         val_r = p_val_[0] & (-8388608 >> delta_exponent) # -8388608: ff800000
