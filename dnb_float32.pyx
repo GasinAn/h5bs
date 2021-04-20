@@ -143,7 +143,11 @@ def bit_round_py(np.float32_t val, np.float32_t g_max):
     return bit_round(val, g_max)
 
 cdef inline np.float32_t bit_round(np.float32_t val, np.float32_t g_max):
-    """Round val to val_r = n*2**b (int n; int b = max(b: 2**b <= g_max))."""
+    """
+    Round val to val_r = n*2**b (int n; int b = max(b: 2**b <= g_max)).
+    Warning: undefined behavior when delta_exponent >= 32.
+
+    """
 
     cdef np.uint32_t *p_val = <np.uint32_t*> &val
     cdef np.uint32_t *p_g_max = <np.uint32_t*> &g_max
