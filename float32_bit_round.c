@@ -18,7 +18,5 @@ float float32_bit_round(float val, float g_max){
 }
 
 int main(){
-    int delta_exponent = -1;
-    printf("%x\n",-8388608);
     return 0;
 }
