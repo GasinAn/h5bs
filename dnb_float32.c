@@ -3165,7 +3165,7 @@ static CYTHON_INLINE __pyx_t_5numpy_float32_t __pyx_f_11dnb_float32_bit_round(__
   __pyx_v_delta_exponent = ((__pyx_v_exponent_val - __pyx_v_exponent_g_max) >> 23);
 
   /* "dnb_float32.pyx":163
- *     # return trunc_radix_2(val + sgn(val) * 2 ** (b - 1)).
+ *     # return trunc_to_mul_of_2_to_b(val + sgn(val) * 2 ** (b - 1)).
  *     cdef np.uint32_t val_r_dexp_ge_0
  *     val_r_dexp_ge_0 = p_val[0] + (0x00400000 >> delta_exponent)             # <<<<<<<<<<<<<<
  *     val_r_dexp_ge_0 = val_r_dexp_ge_0 & (-8388608 >> delta_exponent)
