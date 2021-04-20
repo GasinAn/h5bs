@@ -54,5 +54,9 @@ float float32_bit_round(float val, float g_max){
 }
 
 int main(){
+    int a = -1;
+    unsigned int b = 4294967295;
+    printf("%x\n",a>>1);
+    printf("%x\n",b>>1);
     return 0;
 }

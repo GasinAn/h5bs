@@ -145,46 +145,18 @@ def bit_round_py(np.float32_t val, np.float32_t g_max):
 cdef inline np.float32_t bit_round(np.float32_t val, np.float32_t g_max):
     """Round val to val_r = n*2**b (int n; int b = max(b: 2**b <= g_max))."""
 
-    cdef np.int32_t *p_val = <np.int32_t*> &val
-    cdef np.int32_t *p_g_max = <np.int32_t*> &g_max
+    cdef np.uint32_t *p_val = <np.uint32_t*> &val
+    cdef np.uint32_t *p_g_max = <np.uint32_t*> &g_max
 
     cdef np.int32_t exponent_val = p_val[0] & 0x7f800000
     cdef np.int32_t exponent_g_max = p_g_max[0] & 0x7f800000
 
     cdef np.int32_t delta_exponent = (exponent_val - exponent_g_max) >> 23
 
-    cdef np.int32_t g
-    cdef np.float32_t *p_g
+    cdef np.uint32_t val_ = p_val[0] + (0x00400000 >> delta_exponent)
+    cdef np.uint32_t val_r = val_ & (-8388608 >> delta_exponent)
 
-    cdef np.float32_t val_
-    cdef np.int32_t *p_val_
-
-    cdef np.int32_t val_r
-    cdef np.float32_t *p_val_r
-
-    if delta_exponent >> 31: # delta_exponent < 0
-        g = p_g_max[0] & 0x7f800000
-        g = (p_val[0] & -2147483648) | g # -2147483648: 80000000
-        g = (delta_exponent == -1) * g
-        p_g = <np.float32_t*> &g
-        return p_g[0]
-
-    elif delta_exponent < 23:
-        g = p_g_max[0] & -8388608 # -8388608: ff800000
-        p_g = <np.float32_t*> &g
-
-        if p_val[0] >> 31: # p_val[0] < 0
-            val_ = val - (p_g[0] / 2.0)
-        else:
-            val_ = val + (p_g[0] / 2.0)
-        p_val_ = <np.int32_t*> &val_
-
-        val_r = p_val_[0] & (-8388608 >> delta_exponent) # -8388608: ff800000
-        p_val_r = <np.float32_t*> &val_r
-        return p_val_r[0]
-
-    else:
-        return val
+    return (<np.float32_t*> &val_r)[0]
 
 def test():
     """Test reduce_precision."""
