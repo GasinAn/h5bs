@@ -157,16 +157,20 @@ cdef inline np.float32_t bit_round(np.float32_t val, np.float32_t g_max):
 
     cdef np.int32_t delta_exponent = (exponent_val - exponent_g_max) >> 23
 
-    cdef np.uint32_t val_r_de_ge_0
-    val_r_de_ge_0 = p_val[0] + (0x00400000 >> delta_exponent)
-    val_r_de_ge_0 = val_r_de_ge_0 & (-8388608 >> delta_exponent)
-    val_r_de_ge_0 = (delta_exponent > -1) * val_r_de_ge_0
+    # Situation: delta_exponent >= 0,
+    # return trunc_radix_2(val + sgn(val) * 2 ** (b - 1)).
+    cdef np.uint32_t val_r_dexp_ge_0
+    val_r_dexp_ge_0 = p_val[0] + (0x00400000 >> delta_exponent)
+    val_r_dexp_ge_0 = val_r_dexp_ge_0 & (-8388608 >> delta_exponent)
+    val_r_dexp_ge_0 = (delta_exponent > -1) * val_r_dexp_ge_0
 
-    cdef np.uint32_t val_r_de_eq_m1
-    val_r_de_eq_m1 = (p_val[0] & -2147483648) | exponent_g_max
-    val_r_de_eq_m1 = (delta_exponent == -1) * val_r_de_eq_m1
+    # Situation: delta_exponent == -1,
+    # return sgn(val) * g_max.
+    cdef np.uint32_t val_r_dexp_eq_m1
+    val_r_dexp_eq_m1 = (p_val[0] & -2147483648) | exponent_g_max
+    val_r_dexp_eq_m1 = (delta_exponent == -1) * val_r_dexp_eq_m1
 
-    cdef np.uint32_t val_r = val_r_de_ge_0 + val_r_de_eq_m1
+    cdef np.uint32_t val_r = val_r_dexp_ge_0 + val_r_dexp_eq_m1
     return (<np.float32_t*> &val_r)[0]
 
 def test():
