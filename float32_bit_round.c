@@ -14,11 +14,21 @@ float float32_bit_round(float val, float g_max){
     unsigned int val_ = *p_val + (0x00400000 >> delta_exponent);
     unsigned int val_r = val_ & (-8388608 >> delta_exponent);
 
-    return *((float*) &val_r);
+    if (delta_exponent > -1)
+    {
+        return *((float*) &val_r);
+    }
+    else if (delta_exponent > -2)
+    {
+        int signed_g = (*p_val & -2147483648) | exponent_g_max;
+        return *((float*) &signed_g);
+    }
+    else
+    {
+        return 0.0;
+    }
 }
 
 int main(){
-    int delta_exponent = -1;
-    printf("%x\n",-8388608);
     return 0;
 }
