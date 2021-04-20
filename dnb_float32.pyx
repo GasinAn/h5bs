@@ -157,17 +157,21 @@ cdef inline np.float32_t bit_round(np.float32_t val, np.float32_t g_max):
 
     cdef np.int32_t delta_exponent = (exponent_val - exponent_g_max) >> 23
 
-    cdef np.uint32_t val_ = p_val[0] + (0x00400000 >> delta_exponent)
-    cdef np.uint32_t val_r = val_ & (-8388608 >> delta_exponent)
+    # Situation: delta_exponent >= 0,
+    # return trunc_to_mul_of_2_to_b(val + sgn(val) * 2 ** (b - 1)).
+    cdef np.uint32_t val_r_dexp_ge_0
+    val_r_dexp_ge_0 = p_val[0] + (0x00400000 >> delta_exponent)
+    val_r_dexp_ge_0 = val_r_dexp_ge_0 & (-8388608 >> delta_exponent)
+    val_r_dexp_ge_0 = (delta_exponent > -1) * val_r_dexp_ge_0
 
-    cdef np.int32_t signed_g
-    if delta_exponent > -1:
-        return (<np.float32_t*> &val_r)[0]
-    elif delta_exponent > -2:
-        signed_g = (p_val[0] & -2147483648) | exponent_g_max
-        return (<np.float32_t*> &signed_g)[0]
-    else:
-        return 0.0
+    # Situation: delta_exponent == -1,
+    # return sgn(val) * g_max.
+    cdef np.uint32_t val_r_dexp_eq_m1
+    val_r_dexp_eq_m1 = (p_val[0] & -2147483648) | exponent_g_max
+    val_r_dexp_eq_m1 = (delta_exponent == -1) * val_r_dexp_eq_m1
+
+    cdef np.uint32_t val_r = val_r_dexp_ge_0 + val_r_dexp_eq_m1
+    return (<np.float32_t*> &val_r)[0]
 
 def test():
     """Test reduce_precision."""
