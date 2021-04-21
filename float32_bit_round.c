@@ -19,21 +19,6 @@ float float32_bit_round(float val, float g_max){
     val_r_dexp_ge_0 = val_r_dexp_ge_0 & (-8388608 >> delta_exponent);
     val_r_dexp_ge_0 = (delta_exponent > -1) * val_r_dexp_ge_0;
 
-<<<<<<< HEAD
-    if (delta_exponent > -1)
-    {
-        return *((float*) &val_r);
-    }
-    else if (delta_exponent > -2)
-    {
-        int signed_g = (*p_val & -2147483648) | exponent_g_max;
-        return *((float*) &signed_g);
-    }
-    else
-    {
-        return 0.0;
-    }
-=======
     // Situation: delta_exponent == -1,
     // return sgn(val) * g_max.
     unsigned int val_r_dexp_eq_m1;
@@ -42,7 +27,6 @@ float float32_bit_round(float val, float g_max){
 
     unsigned int val_r = val_r_dexp_ge_0 + val_r_dexp_eq_m1;
     return *((float*) &val_r);
->>>>>>> speed-up
 }
 
 int main(){
