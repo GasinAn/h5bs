@@ -1,6 +1,8 @@
 // Round val to val_r = n*2**b (int n; int b = max(b: 2**b <= g_max)).
 // Warning: undefined behavior when delta_exponent >= 32.
 
+// Include math.h and stdio.h just for testing.
+#include <math.h>
 #include <stdio.h>
 
 #define HEX_00400000 4194304
@@ -34,6 +36,7 @@ float float32_bit_round(float val, float g_max){
     return *((float*) &val_r);
 }
 
+// Add main function just for testing.
 int main(){
     return 0;
 }
