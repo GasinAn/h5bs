@@ -1,5 +1,6 @@
 // Round val to val_r = n*2**b (int n; int b = max(b: 2**b <= g_max)).
 // Warning: undefined behavior when delta_exponent >= 32.
+// Warning: if val or g_max is NAN, the output may not be NAN.
 
 // Include math.h and stdio.h just for testing.
 #include <math.h>
