@@ -28,7 +28,7 @@ float float32_bit_round(float val, float g_max){
     val_r_dexp_ge_0 = (delta_exponent > -1) * val_r_dexp_ge_0;
 
     // Situation: delta_exponent == -1,
-    // return sgn(val) * g_max.
+    // return sgn(val) * 2 ** b.
     unsigned int val_r_dexp_eq_m1;
     val_r_dexp_eq_m1 = (*p_val & HEX_80000000) | exponent_g_max;
     val_r_dexp_eq_m1 = (delta_exponent == -1) * val_r_dexp_eq_m1;
