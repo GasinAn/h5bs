@@ -3,4 +3,4 @@ Hello everyone. The core func in this repo is bit_round in dnb_float32.pyx. I ha
 
 ---
 
-Oh! Maybe I don't need it any more! You may be interested in [bit_round](https://github.com/GasinAn/bitround)!
+Oh! Maybe I don't need it any more! You may be interested in [bitround](https://github.com/GasinAn/bitround)!
